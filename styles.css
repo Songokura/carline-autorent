@@ -63,7 +63,8 @@ p{margin:0}
 body.menu-open .hdr{backdrop-filter:none;background:transparent}
 .hdr-in{height:100%;display:flex;align-items:center;gap:18px;width:min(1320px,100% - 40px);margin:0 auto}
 .logo{display:flex;align-items:center;gap:11px;position:relative;z-index:61;flex:0 0 auto}
-.logo-img{width:42px;height:42px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px rgba(255,255,255,.14)}
+.logo-img{height:42px;width:auto;display:block}
+.foot .logo-img{height:48px}
 .logo-t{font:500 15px/1 var(--fd);letter-spacing:.16em;text-transform:uppercase;color:#fff;white-space:nowrap}
 .logo-t em{font-style:normal;font-weight:300;color:var(--silver)}
 .nav{display:flex;gap:24px;margin:0 auto}
