@@ -77,7 +77,7 @@ var EN = {
   "kt.hrs":"Daily 10:00-22:00","kt.2gis":"We are on 2GIS","kt.addr":"Rakymzhan Koshkarbayev Ave., 10/1, Astana","kt.map":"Map: Carline Autorent, Koshkarbayev 10/1","kt.route":"Route on 2GIS",
   "ft.d":"Self-drive car rental in Astana.",
   "al.hero":"Crossover with headlights on a night road","al.ek":"Economy-class Chevrolet with headlights on","al.ko":"White Hyundai Elantra sedan in a night parking lot","al.bi":"Black Toyota Camry 70 with headlights on by a building in the evening","al.su":"Grey Hyundai Santa Fe by Carline Autorent, rear view","al.dost":"Dark sedan driving through the city at night",
-  "al.elantra":"Hyundai Elantra in a dark studio","al.camry55":"Black Toyota Camry 55 by Carline Autorent with headlights on","al.camry70p":"Black Toyota Camry 70 Prestige by Carline Autorent in a parking garage","al.camry70l":"Black Toyota Camry 70 Luxe with headlights on in the evening","al.cobalt":"White Chevrolet Cobalt 2026 by Carline Autorent","g.btn":"All photos","g.hint":"Click to open the gallery","g.soon":"Photo coming soon","g.s1":"Interior: front row","g.s2":"Interior: rear row","g.s3":"Trunk","g.aria":"Car photos","g.close":"Close","g.prev":"Previous photo","g.next":"Next photo","al.k5":"Grey Kia K5 in a parking garage","al.santafe":"Grey Hyundai Santa Fe by Carline Autorent, front view",
+  "al.elantra":"Hyundai Elantra in a dark studio","al.camry55":"Black Toyota Camry 55 by Carline Autorent with headlights on","al.camry70p":"Black Toyota Camry 70 Prestige by Carline Autorent in a parking garage","al.camry70l":"Black Toyota Camry 70 Luxe with headlights on in the evening","al.camry80":"Black Toyota Camry 80 by Carline Autorent","al.cobalt":"White Chevrolet Cobalt 2026 by Carline Autorent","g.btn":"All photos","g.hint":"Click to open the gallery","g.soon":"Photo coming soon","g.s1":"Interior: front row","g.s2":"Interior: rear row","g.s3":"Trunk","g.aria":"Car photos","g.close":"Close","g.prev":"Previous photo","g.next":"Next photo","al.k5":"Grey Kia K5 in a parking garage","al.santafe":"Grey Hyundai Santa Fe by Carline Autorent, front view",
   "mq.list":"Chevrolet Cobalt|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|from 15,000 KZT per day|Delivery from 5,000 KZT"
 };
 var RU_MQ = "Chevrolet Cobalt|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|от 15 000 тг в сутки|Доставка от 5 000 тг";
@@ -386,6 +386,7 @@ var GAL = {
   camry70p: {t:"car.camry70p", s:[1,2,3,4,5,6,7].map(function(n){ return "assets/img/g/camry70p-" + n + ".webp"; })},
   camry70l: {t:"car.camry70l", s:[1,2,3,4,5,6,7,8].map(function(n){ return "assets/img/g/camry70l-" + n + ".webp"; })},
   camry55:  {t:"car.camry55",  s:[1,2,3,4,5,6,7].map(function(n){ return "assets/img/g/camry55-" + n + ".webp"; })},
+  camry80:  {t:"car.camry80",  s:[1,2,3,4,5,6,7,8].map(function(n){ return "assets/img/g/camry80-" + n + ".webp"; })},
   santafe:  {t:"car.santafe",  s:[1,2,3,4,5,6,7,8].map(function(n){ return "assets/img/g/santafe-" + n + ".webp"; })}
 };
 RU["g.hint"] = "Нажмите - откроется галерея"; RU["g.s1"] = "Салон: передний ряд"; RU["g.s2"] = "Салон: задний ряд"; RU["g.s3"] = "Багажник";
