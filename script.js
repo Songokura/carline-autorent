@@ -76,8 +76,8 @@ var EN = {
   "kt.k":"Contacts","kt.h":"Message or call us","kt.l":"We reply daily from 10:00 to 22:00. Office - Rakymzhan Koshkarbayev Avenue, 10/1, Astana.",
   "kt.hrs":"Daily 10:00-22:00","kt.2gis":"We are on 2GIS","kt.addr":"Rakymzhan Koshkarbayev Ave., 10/1, Astana","kt.map":"Map: Carline Autorent, Koshkarbayev 10/1","kt.route":"Route on 2GIS",
   "ft.d":"Self-drive car rental in Astana.",
-  "al.hero":"Crossover with headlights on a night road","al.ek":"Economy-class Chevrolet with headlights on","al.ko":"White Hyundai Elantra sedan in a night parking lot","al.bi":"White Toyota Camry on a city street at night","al.su":"White Hyundai Santa Fe crossover by a building wall","al.dost":"Dark sedan driving through the city at night",
-  "al.elantra":"Hyundai Elantra in a dark studio","al.camry55":"Toyota Camry 55, tail light and Camry badge","al.camry70p":"White Toyota Camry 70 under a canopy","al.camry70l":"Red Toyota Camry 70 on a city street","al.k5":"Grey Kia K5 in a parking garage","al.santafe":"White Hyundai Santa Fe, front view",
+  "al.hero":"Crossover with headlights on a night road","al.ek":"Economy-class Chevrolet with headlights on","al.ko":"White Hyundai Elantra sedan in a night parking lot","al.bi":"Black Toyota Camry 70 with headlights on by a building in the evening","al.su":"White Hyundai Santa Fe crossover by a building wall","al.dost":"Dark sedan driving through the city at night",
+  "al.elantra":"Hyundai Elantra in a dark studio","al.camry55":"Toyota Camry 55, tail light and Camry badge","al.camry70p":"Black Toyota Camry 70 Prestige by Carline Autorent in a parking garage","al.camry70l":"Black Toyota Camry 70 Luxe with headlights on in the evening","al.cobalt":"White Chevrolet Cobalt 2026 by Carline Autorent","g.btn":"All photos","g.soon":"Photo coming soon","g.s1":"Interior: front row","g.s2":"Interior: rear row","g.s3":"Trunk","g.aria":"Car photos","g.close":"Close","g.prev":"Previous photo","g.next":"Next photo","al.k5":"Grey Kia K5 in a parking garage","al.santafe":"White Hyundai Santa Fe, front view",
   "mq.list":"Chevrolet Cobalt|Chevrolet Onix|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|from 15,000 KZT per day|Delivery across Astana"
 };
 var RU_MQ = "Chevrolet Cobalt|Chevrolet Onix|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|от 15 000 тг в сутки|Доставка по Астане";
@@ -376,5 +376,65 @@ if (location.hash) {
     setTimeout(function(){ goTo(hid, false); }, 60);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ if (location.hash.slice(1) === hid) goTo(hid, false); });
   }
+}
+
+/* ---------------- ГАЛЕРЕЯ МАШИНЫ ----------------
+   Слайд - путь к фото или {ph:"ключ подписи"} (заглушка до фото клиента:
+   чтобы заменить, вписать вместо неё путь к файлу). */
+var GAL = {
+  cobalt:   {t:"car.cobalt",   s:[1,2,3,4,5,6,7,8].map(function(n){ return "assets/img/g/cobalt-" + n + ".webp"; })},
+  camry70p: {t:"car.camry70p", s:[1,2,3,4,5,6,7].map(function(n){ return "assets/img/g/camry70p-" + n + ".webp"; })},
+  camry70l: {t:"car.camry70l", s:[1,2,3,4,5,6,7,8].map(function(n){ return "assets/img/g/camry70l-" + n + ".webp"; })},
+  santafe:  {t:"car.santafe",  s:["assets/img/c-santafe.webp", {ph:"g.s1"}, {ph:"g.s2"}, {ph:"g.s3"}]}
+};
+RU["g.s1"] = "Салон: передний ряд"; RU["g.s2"] = "Салон: задний ряд"; RU["g.s3"] = "Багажник";
+var lb = document.getElementById("lb");
+if (lb) {
+  var lbImg = lb.querySelector(".lb-img"), lbPh = lb.querySelector(".lb-ph"), lbPhT = lb.querySelector(".lb-ph-t"),
+      lbT = lb.querySelector(".lb-t"), lbN = lb.querySelector(".lb-n"),
+      lbPrev = lb.querySelector(".lb-prev"), lbNext = lb.querySelector(".lb-next"), lbX = lb.querySelector(".lb-x"),
+      cur = null, idx = 0, back = null;
+  var show = function(i){
+    var sl = cur.s; idx = Math.max(0, Math.min(sl.length - 1, i));
+    var it = sl[idx];
+    if (typeof it === "string") {
+      lbPh.hidden = true; lbImg.hidden = false; lbImg.src = it; lbImg.alt = tr(cur.t) + " - " + (idx + 1);
+    } else {
+      lbImg.hidden = true; lbImg.removeAttribute("src"); lbPh.hidden = false; lbPhT.textContent = tr(it.ph);
+    }
+    lbN.textContent = (idx + 1) + " / " + sl.length;
+    lbPrev.disabled = idx === 0; lbNext.disabled = idx === sl.length - 1;
+    [idx - 1, idx + 1].forEach(function(j){ if (typeof sl[j] === "string") { var im = new Image(); im.src = sl[j]; } });
+  };
+  var open = function(key, from){
+    cur = GAL[key]; if (!cur) return;
+    back = from; lbT.textContent = tr(cur.t);
+    lb.hidden = false; document.body.classList.add("lb-open");
+    show(0); lbX.focus();
+  };
+  var close = function(){
+    lb.hidden = true; document.body.classList.remove("lb-open"); lbImg.removeAttribute("src");
+    if (back) back.focus();
+  };
+  document.addEventListener("click", function(e){
+    var b = e.target.closest && e.target.closest(".gal-btn");
+    if (b) { e.preventDefault(); open(b.dataset.gal, b); }
+  });
+  lbPrev.addEventListener("click", function(){ show(idx - 1); });
+  lbNext.addEventListener("click", function(){ show(idx + 1); });
+  lbX.addEventListener("click", close);
+  lb.addEventListener("click", function(e){ if (e.target === lb || e.target.classList.contains("lb-stage")) close(); });
+  document.addEventListener("keydown", function(e){
+    if (lb.hidden) return;
+    if (e.key === "Escape") close();
+    else if (e.key === "ArrowLeft") show(idx - 1);
+    else if (e.key === "ArrowRight") show(idx + 1);
+  });
+  var tx = null;
+  lb.addEventListener("touchstart", function(e){ tx = e.touches[0].clientX; }, {passive:true});
+  lb.addEventListener("touchend", function(e){
+    if (tx == null) return; var dx = e.changedTouches[0].clientX - tx; tx = null;
+    if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+  }, {passive:true});
 }
 })();

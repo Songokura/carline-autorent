@@ -353,3 +353,34 @@ html.no-plate .has-img .cimg img{transform:none;transition:none}
 .cur:empty,.price [data-i="w.from"]:empty{display:none}
 html[lang="kk"] .price [data-i="w.day"],html[lang="kk"] .cprice [data-i="w.day"]{order:-1}
 html[lang="kk"] .price [data-i="w.from"]{order:5}
+
+/* ---------- галерея машины ---------- */
+.gal-btn{position:absolute;right:12px;bottom:12px;z-index:3;display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 13px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(14,15,17,.62);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--white);font:600 12px/1 var(--ft);letter-spacing:.04em;cursor:pointer;transition:background .25s,border-color .25s}
+.gal-btn b{font-weight:600;color:var(--silver)}
+.gal-btn:hover,.gal-btn:focus-visible{background:var(--red);border-color:var(--red)}
+.gal-btn:hover b,.gal-btn:focus-visible b{color:var(--white)}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(8,9,10,.985);display:grid;grid-template-rows:auto 1fr;color:var(--white)}
+.lb[hidden]{display:none}
+.lb-top{display:flex;align-items:center;gap:16px;padding:14px 16px 10px 20px}
+.lb-t{margin:0;flex:1;font:400 17px/1.25 var(--fd);letter-spacing:.06em;text-transform:uppercase}
+.lb-n{font:600 12px/1 var(--ft);letter-spacing:.14em;color:var(--steel)}
+.lb-x{width:44px;height:44px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:none;color:var(--white);cursor:pointer}
+.lb-x:hover{border-color:var(--red);background:var(--red)}
+.lb-stage{position:relative;min-height:0;display:grid;place-items:center;padding:0 72px 24px}
+.lb-img{max-width:100%;max-height:calc(100vh - 100px);max-height:calc(100svh - 100px);object-fit:contain;border-radius:6px;user-select:none}
+.lb-img[hidden],.lb-ph[hidden]{display:none}
+.lb-ph{width:min(560px,100%);aspect-ratio:4/3;border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 15px),var(--coal);color:var(--silver);font:400 16px/1.3 var(--fd);letter-spacing:.06em}
+.lb-ph b{font:600 10px/1 var(--ft);letter-spacing:.2em;text-transform:uppercase;color:var(--steel)}
+.lb-nav{position:absolute;top:50%;width:52px;height:52px;margin-top:-26px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.24);border-radius:50%;background:rgba(14,15,17,.6);color:var(--white);cursor:pointer;transition:background .25s,border-color .25s,opacity .25s}
+.lb-nav:hover:not(:disabled){background:var(--red);border-color:var(--red)}
+.lb-nav:disabled{opacity:.25;cursor:default}
+.lb-prev{left:12px}.lb-prev svg{transform:scaleX(-1)}
+.lb-next{right:12px}
+body.lb-open{overflow:hidden}
+@media (max-width:760px){
+  .lb-stage{padding:0 8px 84px}
+  .lb-img{max-height:calc(100vh - 170px);max-height:calc(100svh - 170px)}
+  .lb-nav{top:auto;bottom:18px;margin-top:0}
+  .lb-prev{left:calc(50% - 64px)}.lb-next{right:calc(50% - 64px)}
+  .gal-btn{height:34px;padding:0 11px;right:10px;bottom:10px}
+}
