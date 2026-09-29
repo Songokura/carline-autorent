@@ -399,3 +399,11 @@ body.lb-open{overflow:hidden}
 }
 .cs::after{content:"";position:absolute;left:0;right:0;top:0;height:34%;background:linear-gradient(180deg,rgba(8,9,10,.62),transparent);opacity:0;transition:opacity .3s}
 .has-gal.play .cs::after{opacity:1}
+
+/* ---------- цены доставки на плите ---------- */
+.dprice{list-style:none;margin:16px auto 14px;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+.dprice li{display:flex;align-items:baseline;gap:8px;padding:12px 18px;border:1px solid rgba(255,255,255,.22);border-radius:14px;background:rgba(14,15,17,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff}
+.dprice span{font:600 11px/1 var(--ft);letter-spacing:.16em;text-transform:uppercase;color:var(--silver)}
+.dprice b{font:500 clamp(22px,2.6vw,30px)/1 var(--fd);font-variant-numeric:lining-nums;margin-left:4px}
+.dprice em{font:600 11px/1 var(--ft);font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--silver)}
+.dprice li:first-child{border-color:rgba(200,16,46,.7)}

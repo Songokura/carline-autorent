@@ -48,10 +48,10 @@ var EN = {
   "ph.t":"Car photo",
   "car.cobalt":"Chevrolet Cobalt","car.elantra":"Hyundai Elantra","car.camry55":"Toyota Camry 55","car.camry70p":"Toyota Camry 70 Prestige","car.camry70l":"Toyota Camry 70 Luxe","car.k5":"Kia K5","car.camry80":"Toyota Camry 80","car.santafe":"Hyundai Santa Fe",
   "s.cobalt":"2026 · sedan · 5 seats","s.elantra":"2024 · Luxe · sedan · 5 seats","s.camry55":"N4 · sedan · 5 seats","s.camry70p":"Prestige · sedan · 5 seats","s.camry70l":"Luxe · sedan · 5 seats","s.k5":"2022 · Full · sedan · 5 seats","s.camry80":"Prestige · sedan · 5 seats","s.santafe":"Full · crossover · all-wheel drive",
-  "p.note":"Prices in tenge per day. Deposit, extension and delivery terms - ask the manager on WhatsApp.",
+  "p.note":"Prices in tenge per day. Delivery across the city - 5,000 KZT, to the airport - 10,000 KZT. Deposit and extension terms - ask the manager on WhatsApp.",
   "n1":"cars in the fleet","n2":"KZT - lowest price per day","n3m":"min","n3":"WhatsApp reply time","n4":"daily, no days off",
-  "d.k":"Delivery","d.h":"We bring the car to you","d.l":"We deliver the car across Astana. Delivery cost and time - from the manager on WhatsApp.",
-  "d.b":"Order delivery","d.b2":"Rental terms",
+  "d.k":"Delivery","d.h":"We bring the car to your address","d.l":"Send us the address and a convenient time - we arrive with the car, sign the contract on the spot and hand over the keys.",
+  "d.b":"Order delivery","dp.city":"Across the city","dp.air":"To the airport","dp.u":"KZT","dp.u2":"KZT","d.b2":"Rental terms",
   "u.k":"Terms","u.h":"What you need to rent","u.l":"The essentials in short. Exact amounts and requirements for your car - from the manager on WhatsApp.",
   "u1.h":"Documents","u1.t":"ID and a driving licence. Full list - from the manager.",
   "u2.h":"Deposit","u2.t":"Among the lowest on the market. Depends on the car class - confirmed at booking.",
@@ -66,7 +66,7 @@ var EN = {
   "q.k":"FAQ","q.h":"Frequently asked questions",
   "q1.q":"What is the deposit and when is it returned?","q1.a":"The deposit is minimal and depends on the car class. It is returned after the car is checked in. The manager will name the exact amount.",
   "q2.q":"Which documents do I need?","q2.a":"ID and a driving licence. If there are special requirements for your car, we will tell you at booking.",
-  "q3.q":"Do you deliver the car?","q3.a":"Yes, we deliver the car across Astana. Delivery cost and time - from the manager on WhatsApp.",
+  "q3.q":"Do you deliver the car?","q3.a":"Yes. Across Astana - 5,000 KZT, to the airport - 10,000 KZT. You send the address and time, we arrive, sign the contract on the spot and hand over the car.",
   "q4.q":"Can I extend the rental?","q4.a":"Yes, message us on WhatsApp before the end of the term - we extend without an office visit if the car is free.",
   "q5.q":"In what condition are the cars?","q5.a":"Clean inside and out, fully serviced. You return it the same way - no surprises on either side.",
   "z.k":"Booking","z.h":"Book a car","z.l":"Fill in three fields - the request opens in your WhatsApp, the manager replies within 5 minutes.",
@@ -78,9 +78,9 @@ var EN = {
   "ft.d":"Self-drive car rental in Astana.",
   "al.hero":"Crossover with headlights on a night road","al.ek":"Economy-class Chevrolet with headlights on","al.ko":"White Hyundai Elantra sedan in a night parking lot","al.bi":"Black Toyota Camry 70 with headlights on by a building in the evening","al.su":"Grey Hyundai Santa Fe by Carline Autorent, rear view","al.dost":"Dark sedan driving through the city at night",
   "al.elantra":"Hyundai Elantra in a dark studio","al.camry55":"Black Toyota Camry 55 by Carline Autorent with headlights on","al.camry70p":"Black Toyota Camry 70 Prestige by Carline Autorent in a parking garage","al.camry70l":"Black Toyota Camry 70 Luxe with headlights on in the evening","al.cobalt":"White Chevrolet Cobalt 2026 by Carline Autorent","g.btn":"All photos","g.hint":"Click to open the gallery","g.soon":"Photo coming soon","g.s1":"Interior: front row","g.s2":"Interior: rear row","g.s3":"Trunk","g.aria":"Car photos","g.close":"Close","g.prev":"Previous photo","g.next":"Next photo","al.k5":"Grey Kia K5 in a parking garage","al.santafe":"Grey Hyundai Santa Fe by Carline Autorent, front view",
-  "mq.list":"Chevrolet Cobalt|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|from 15,000 KZT per day|Delivery across Astana"
+  "mq.list":"Chevrolet Cobalt|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|from 15,000 KZT per day|Delivery from 5,000 KZT"
 };
-var RU_MQ = "Chevrolet Cobalt|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|от 15 000 тг в сутки|Доставка по Астане";
+var RU_MQ = "Chevrolet Cobalt|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|от 15 000 тг в сутки|Доставка от 5 000 тг";
 var I18N = {en: EN};
 var RU = {};                                       /* снимок русского текста из разметки */
 
@@ -88,8 +88,8 @@ var RU = {};                                       /* снимок русско�
    data-wa="general|class|car|delivery"; class и car берут название из data-wa-title (ключ i18n).
    Обработчик в фазе захвата на window - раньше трекера LeadBot, чтобы он дописал код к готовой ссылке. */
 var WA_T = {
-  ru:{general:"Здравствуйте! Пишу с сайта Carline Autorent. Хочу арендовать автомобиль.", "class":"Здравствуйте! Пишу с сайта Carline Autorent. Интересует класс:\n{name}\nПодскажите, какие машины свободны и условия.", car:"Здравствуйте! Пишу с сайта Carline Autorent. Хочу забронировать:\n{name}\nДаты аренды: ", delivery:"Здравствуйте! Пишу с сайта Carline Autorent. Хочу арендовать машину с доставкой по городу. Подскажите условия подачи."},
-  en:{general:"Hello! I'm writing from the Carline Autorent website. I'd like to rent a car.", "class":"Hello! I'm writing from the Carline Autorent website. I'm interested in the class:\n{name}\nWhich cars are available and on what terms?", car:"Hello! I'm writing from the Carline Autorent website. I'd like to book:\n{name}\nRental dates: ", delivery:"Hello! I'm writing from the Carline Autorent website. I'd like to rent a car with delivery across the city. Please tell me the delivery terms."}
+  ru:{general:"Здравствуйте! Пишу с сайта Carline Autorent. Хочу арендовать автомобиль.", "class":"Здравствуйте! Пишу с сайта Carline Autorent. Интересует класс:\n{name}\nПодскажите, какие машины свободны и условия.", car:"Здравствуйте! Пишу с сайта Carline Autorent. Хочу забронировать:\n{name}\nДаты аренды: ", delivery:"Здравствуйте! Пишу с сайта Carline Autorent. Хочу арендовать машину с доставкой.\nМашина:\nАдрес:\nДата и время:"},
+  en:{general:"Hello! I'm writing from the Carline Autorent website. I'd like to rent a car.", "class":"Hello! I'm writing from the Carline Autorent website. I'm interested in the class:\n{name}\nWhich cars are available and on what terms?", car:"Hello! I'm writing from the Carline Autorent website. I'd like to book:\n{name}\nRental dates: ", delivery:"Hello! I'm writing from the Carline Autorent website. I'd like to rent a car with delivery.\nCar:\nAddress:\nDate and time:"}
 };
 function tr(key){
   var L = curLang(), d = I18N[L];
