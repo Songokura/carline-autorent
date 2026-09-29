@@ -356,10 +356,21 @@ html[lang="kk"] .price [data-i="w.day"],html[lang="kk"] .cprice [data-i="w.day"]
 html[lang="kk"] .price [data-i="w.from"]{order:5}
 
 /* ---------- галерея машины ---------- */
-.gal-btn{position:absolute;right:12px;bottom:12px;z-index:3;display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 13px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(14,15,17,.62);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--white);font:600 12px/1 var(--ft);letter-spacing:.04em;cursor:pointer;transition:background .25s,border-color .25s}
-.gal-btn b{font-weight:600;color:var(--silver)}
-.gal-btn:hover,.gal-btn:focus-visible{background:var(--red);border-color:var(--red)}
-.gal-btn:hover b,.gal-btn:focus-visible b{color:var(--white)}
+.gal-btn{position:absolute;right:12px;bottom:12px;z-index:4;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px 0 14px;border:0;border-radius:999px;background:var(--red);box-shadow:0 6px 18px rgba(200,16,46,.38);color:#fff;font:600 12px/1 var(--ft);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .25s,transform .25s}
+.gal-btn b{font-weight:600;padding-left:8px;border-left:1px solid rgba(255,255,255,.4)}
+.gal-btn:hover,.gal-btn:focus-visible{background:var(--red2);transform:translateY(-1px)}
+.has-gal .cimg{cursor:zoom-in}
+.cs{position:absolute;inset:0;z-index:2;pointer-events:none}
+.cimg .cs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transform:none!important;transition:opacity .7s ease}
+.cimg .cs img.on{opacity:1}
+.cbars{position:absolute;left:12px;right:12px;top:12px;z-index:4;display:flex;gap:4px;opacity:0;transition:opacity .3s;pointer-events:none}
+.cbars i{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.35);overflow:hidden}
+.cbars i::after{content:"";display:block;height:100%;width:100%;background:#fff;transform:scaleX(0);transform-origin:left}
+.cbars i.done::after{transform:scaleX(1)}
+.cbars i.run::after{transform:scaleX(1);transition:transform var(--dur,1.6s) linear}
+.has-gal.play .cbars{opacity:1}
+.chint{position:absolute;left:12px;top:24px;z-index:4;font:600 11px/1 var(--ft);letter-spacing:.12em;text-transform:uppercase;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.6);opacity:0;transition:opacity .3s;pointer-events:none}
+.has-gal.play .chint{opacity:1}
 .lb{position:fixed;inset:0;z-index:200;background:rgba(8,9,10,.985);display:grid;grid-template-rows:auto 1fr;color:var(--white)}
 .lb[hidden]{display:none}
 .lb-top{display:flex;align-items:center;gap:16px;padding:14px 16px 10px 20px}
@@ -383,5 +394,8 @@ body.lb-open{overflow:hidden}
   .lb-img{max-height:calc(100vh - 170px);max-height:calc(100svh - 170px)}
   .lb-nav{top:auto;bottom:18px;margin-top:0}
   .lb-prev{left:calc(50% - 64px)}.lb-next{right:calc(50% - 64px)}
-  .gal-btn{height:34px;padding:0 11px;right:10px;bottom:10px}
+  .gal-btn{height:36px;padding:0 13px 0 12px;right:10px;bottom:10px;font-size:11px}
+  .chint{display:none}
 }
+.cs::after{content:"";position:absolute;left:0;right:0;top:0;height:34%;background:linear-gradient(180deg,rgba(8,9,10,.62),transparent);opacity:0;transition:opacity .3s}
+.has-gal.play .cs::after{opacity:1}

@@ -27,7 +27,7 @@ function conv(key, item){
 /* ---------------- АНГЛИЙСКИЙ СЛОВАРЬ ---------------- */
 var EN = {
   "m.title":"Car Rental in Astana without a Driver from 15,000 KZT per Day - Carline Autorent",
-  "m.desc":"Self-drive car rental in Astana: 9 cars from economy to business class, from 15,000 KZT per day. Minimal deposit, clean and serviced cars, delivery across the city, WhatsApp reply within 5 minutes. Open daily 10:00-22:00.",
+  "m.desc":"Self-drive car rental in Astana: 8 cars from economy to business class, from 15,000 KZT per day. Minimal deposit, clean and serviced cars, delivery across the city, WhatsApp reply within 5 minutes. Open daily 10:00-22:00.",
   "m.ogt":"Carline Autorent - self-drive car rental in Astana",
   "a.menu":"Menu","a.home":"Carline Autorent - home","a.nav":"Sections","a.lang":"Site language","a.call":"Call","a.mnav":"Mobile menu",
   "a.hero":"Self-drive car rental in Astana","a.ek":"Economy class","a.ko":"Comfort class","a.bi":"Business class","a.su":"SUV","a.park":"Fleet and prices","a.filter":"Filter by class","a.dost":"Car delivery across the city","a.usl":"Rental terms","a.kak":"How to rent","a.faq":"FAQ","a.zay":"Booking request","a.kont":"Contacts","a.bar":"Quick contact",
@@ -37,20 +37,20 @@ var EN = {
   "w.from":"from","w.day":"KZT / day","w.cur":"","w.curf":"",
   "h.kicker":"Astana · self-drive rental","h.kicker2":"· daily 10:00-22:00",
   "h.l1":"Car rental","h.l2":"without a driver in Astana",
-  "h.lead":"9 cars from economy to business class, from 15,000 KZT per day. Minimal deposit, delivery across the city, WhatsApp reply within 5 minutes.",
+  "h.lead":"8 cars from economy to business class, from 15,000 KZT per day. Minimal deposit, delivery across the city, WhatsApp reply within 5 minutes.",
   "h.b1":"Book on WhatsApp","h.b2":"See the fleet","h.ig":"Our fleet on Instagram",
-  "c1.k":"Economy","c1.h":"Chevrolet Cobalt and Onix","c1.l":"For the city and errands: affordable, economical, always clean.",
+  "c1.k":"Economy","c1.h":"Chevrolet Cobalt 2026","c1.l":"For the city and errands: affordable, economical, always clean.",
   "c2.k":"Comfort","c2.h":"Hyundai Elantra and Toyota Camry 55","c2.l":"Comfortable sedans for every day, meetings and family trips.",
   "c3.k":"Business","c3.h":"Toyota Camry 70, Kia K5 and Camry 80","c3.l":"Executive sedans for business trips, meetings and events.",
   "c4.k":"SUV","c4.h":"Hyundai Santa Fe","c4.l":"A spacious crossover for the family, city guests and trips out of town.",
-  "p.k":"Fleet","p.h":"9 cars, prices per day","p.l":"Discounts are already included. Tap \"Book\" - WhatsApp opens with the name of the chosen car.",
+  "p.k":"Fleet","p.h":"8 cars, prices per day","p.l":"Discounts are already included. Tap \"Book\" - WhatsApp opens with the name of the chosen car.",
   "f.all":"All","f.ek":"Economy","f.ko":"Comfort","f.bi":"Business","f.su":"SUV",
   "ph.t":"Car photo",
-  "car.cobalt":"Chevrolet Cobalt","car.onix":"Chevrolet Onix","car.elantra":"Hyundai Elantra","car.camry55":"Toyota Camry 55","car.camry70p":"Toyota Camry 70 Prestige","car.camry70l":"Toyota Camry 70 Luxe","car.k5":"Kia K5","car.camry80":"Toyota Camry 80","car.santafe":"Hyundai Santa Fe",
-  "s.cobalt":"2026 · sedan · 5 seats","s.onix":"2026 · sedan · 5 seats","s.elantra":"2024 · Luxe · sedan · 5 seats","s.camry55":"N4 · sedan · 5 seats","s.camry70p":"Prestige · sedan · 5 seats","s.camry70l":"Luxe · sedan · 5 seats","s.k5":"2022 · Full · sedan · 5 seats","s.camry80":"Prestige · sedan · 5 seats","s.santafe":"Full · crossover · all-wheel drive",
+  "car.cobalt":"Chevrolet Cobalt","car.elantra":"Hyundai Elantra","car.camry55":"Toyota Camry 55","car.camry70p":"Toyota Camry 70 Prestige","car.camry70l":"Toyota Camry 70 Luxe","car.k5":"Kia K5","car.camry80":"Toyota Camry 80","car.santafe":"Hyundai Santa Fe",
+  "s.cobalt":"2026 · sedan · 5 seats","s.elantra":"2024 · Luxe · sedan · 5 seats","s.camry55":"N4 · sedan · 5 seats","s.camry70p":"Prestige · sedan · 5 seats","s.camry70l":"Luxe · sedan · 5 seats","s.k5":"2022 · Full · sedan · 5 seats","s.camry80":"Prestige · sedan · 5 seats","s.santafe":"Full · crossover · all-wheel drive",
   "p.note":"Prices in tenge per day. Deposit, extension and delivery terms - ask the manager on WhatsApp.",
   "n1":"cars in the fleet","n2":"KZT - lowest price per day","n3m":"min","n3":"WhatsApp reply time","n4":"daily, no days off",
-  "d.k":"Delivery","d.h":"We bring the car to you","d.l":"To your home, office, station or airport - and collect it after the rental. Delivery cost and time - from the manager.",
+  "d.k":"Delivery","d.h":"We bring the car to you","d.l":"We deliver the car across Astana. Delivery cost and time - from the manager on WhatsApp.",
   "d.b":"Order delivery","d.b2":"Rental terms",
   "u.k":"Terms","u.h":"What you need to rent","u.l":"The essentials in short. Exact amounts and requirements for your car - from the manager on WhatsApp.",
   "u1.h":"Documents","u1.t":"ID and a driving licence. Full list - from the manager.",
@@ -66,7 +66,7 @@ var EN = {
   "q.k":"FAQ","q.h":"Frequently asked questions",
   "q1.q":"What is the deposit and when is it returned?","q1.a":"The deposit is minimal and depends on the car class. It is returned after the car is checked in. The manager will name the exact amount.",
   "q2.q":"Which documents do I need?","q2.a":"ID and a driving licence. If there are special requirements for your car, we will tell you at booking.",
-  "q3.q":"Do you deliver the car?","q3.a":"Yes, across Astana: to your home, office, station or airport. Delivery cost and time - from the manager.",
+  "q3.q":"Do you deliver the car?","q3.a":"Yes, we deliver the car across Astana. Delivery cost and time - from the manager on WhatsApp.",
   "q4.q":"Can I extend the rental?","q4.a":"Yes, message us on WhatsApp before the end of the term - we extend without an office visit if the car is free.",
   "q5.q":"In what condition are the cars?","q5.a":"Clean inside and out, fully serviced. You return it the same way - no surprises on either side.",
   "z.k":"Booking","z.h":"Book a car","z.l":"Fill in three fields - the request opens in your WhatsApp, the manager replies within 5 minutes.",
@@ -77,10 +77,10 @@ var EN = {
   "kt.hrs":"Daily 10:00-22:00","kt.2gis":"We are on 2GIS","kt.addr":"Rakymzhan Koshkarbayev Ave., 10/1, Astana","kt.map":"Map: Carline Autorent, Koshkarbayev 10/1","kt.route":"Route on 2GIS",
   "ft.d":"Self-drive car rental in Astana.",
   "al.hero":"Crossover with headlights on a night road","al.ek":"Economy-class Chevrolet with headlights on","al.ko":"White Hyundai Elantra sedan in a night parking lot","al.bi":"Black Toyota Camry 70 with headlights on by a building in the evening","al.su":"Grey Hyundai Santa Fe by Carline Autorent, rear view","al.dost":"Dark sedan driving through the city at night",
-  "al.elantra":"Hyundai Elantra in a dark studio","al.camry55":"Black Toyota Camry 55 by Carline Autorent with headlights on","al.camry70p":"Black Toyota Camry 70 Prestige by Carline Autorent in a parking garage","al.camry70l":"Black Toyota Camry 70 Luxe with headlights on in the evening","al.cobalt":"White Chevrolet Cobalt 2026 by Carline Autorent","g.btn":"All photos","g.soon":"Photo coming soon","g.s1":"Interior: front row","g.s2":"Interior: rear row","g.s3":"Trunk","g.aria":"Car photos","g.close":"Close","g.prev":"Previous photo","g.next":"Next photo","al.k5":"Grey Kia K5 in a parking garage","al.santafe":"Grey Hyundai Santa Fe by Carline Autorent, front view",
-  "mq.list":"Chevrolet Cobalt|Chevrolet Onix|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|from 15,000 KZT per day|Delivery across Astana"
+  "al.elantra":"Hyundai Elantra in a dark studio","al.camry55":"Black Toyota Camry 55 by Carline Autorent with headlights on","al.camry70p":"Black Toyota Camry 70 Prestige by Carline Autorent in a parking garage","al.camry70l":"Black Toyota Camry 70 Luxe with headlights on in the evening","al.cobalt":"White Chevrolet Cobalt 2026 by Carline Autorent","g.btn":"All photos","g.hint":"Click to open the gallery","g.soon":"Photo coming soon","g.s1":"Interior: front row","g.s2":"Interior: rear row","g.s3":"Trunk","g.aria":"Car photos","g.close":"Close","g.prev":"Previous photo","g.next":"Next photo","al.k5":"Grey Kia K5 in a parking garage","al.santafe":"Grey Hyundai Santa Fe by Carline Autorent, front view",
+  "mq.list":"Chevrolet Cobalt|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|from 15,000 KZT per day|Delivery across Astana"
 };
-var RU_MQ = "Chevrolet Cobalt|Chevrolet Onix|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|от 15 000 тг в сутки|Доставка по Астане";
+var RU_MQ = "Chevrolet Cobalt|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|от 15 000 тг в сутки|Доставка по Астане";
 var I18N = {en: EN};
 var RU = {};                                       /* снимок русского текста из разметки */
 
@@ -388,7 +388,7 @@ var GAL = {
   camry55:  {t:"car.camry55",  s:[1,2,3,4,5,6,7].map(function(n){ return "assets/img/g/camry55-" + n + ".webp"; })},
   santafe:  {t:"car.santafe",  s:[1,2,3,4,5,6,7,8].map(function(n){ return "assets/img/g/santafe-" + n + ".webp"; })}
 };
-RU["g.s1"] = "Салон: передний ряд"; RU["g.s2"] = "Салон: задний ряд"; RU["g.s3"] = "Багажник";
+RU["g.hint"] = "Нажмите - откроется галерея"; RU["g.s1"] = "Салон: передний ряд"; RU["g.s2"] = "Салон: задний ряд"; RU["g.s3"] = "Багажник";
 var lb = document.getElementById("lb");
 if (lb) {
   var lbImg = lb.querySelector(".lb-img"), lbPh = lb.querySelector(".lb-ph"), lbPhT = lb.querySelector(".lb-ph-t"),
@@ -407,11 +407,11 @@ if (lb) {
     lbPrev.disabled = idx === 0; lbNext.disabled = idx === sl.length - 1;
     [idx - 1, idx + 1].forEach(function(j){ if (typeof sl[j] === "string") { var im = new Image(); im.src = sl[j]; } });
   };
-  var open = function(key, from){
+  var open = function(key, from, at){
     cur = GAL[key]; if (!cur) return;
     back = from; lbT.textContent = tr(cur.t);
     lb.hidden = false; document.body.classList.add("lb-open");
-    show(0); lbX.focus();
+    show(at || 0); lbX.focus();
   };
   var close = function(){
     lb.hidden = true; document.body.classList.remove("lb-open"); lbImg.removeAttribute("src");
@@ -419,7 +419,9 @@ if (lb) {
   };
   document.addEventListener("click", function(e){
     var b = e.target.closest && e.target.closest(".gal-btn");
-    if (b) { e.preventDefault(); open(b.dataset.gal, b); }
+    if (b) { e.preventDefault(); open(b.dataset.gal, b, +(b.dataset.at || 0)); return; }
+    var ci = e.target.closest && e.target.closest(".has-gal .cimg");
+    if (ci) { var gb = ci.querySelector(".gal-btn"); open(gb.dataset.gal, gb, +(gb.dataset.at || 0)); }
   });
   lbPrev.addEventListener("click", function(){ show(idx - 1); });
   lbNext.addEventListener("click", function(){ show(idx + 1); });
@@ -438,4 +440,47 @@ if (lb) {
     if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
   }, {passive:true});
 }
+
+/* ---------------- СЛАЙД-ШОУ В КАРТОЧКЕ ----------------
+   Наведение (на телефоне - карточка в кадре) листает фото машины прямо в карточке:
+   полоски сверху, клик открывает галерею на текущем кадре. Лёгкие копии - assets/img/g/s/. */
+var HOVER = matchMedia("(hover:hover) and (pointer:fine)").matches;
+var STEP = 1600;
+document.querySelectorAll(".gal-btn").forEach(function(b){
+  var g = GAL[b.dataset.gal]; if (!g) return;
+  var card = b.closest(".card"), ci = b.parentNode;
+  card.classList.add("has-gal");
+  var src = g.s.filter(function(x){ return typeof x === "string"; });
+  var cs = document.createElement("div"); cs.className = "cs"; cs.setAttribute("aria-hidden", "true");
+  var bars = document.createElement("div"); bars.className = "cbars"; bars.setAttribute("aria-hidden", "true");
+  src.forEach(function(){ bars.appendChild(document.createElement("i")); });
+  var hint = document.createElement("span"); hint.className = "chint"; hint.setAttribute("data-i", "g.hint"); hint.textContent = tr("g.hint") || "Нажмите - откроется галерея";
+  ci.appendChild(cs); ci.appendChild(bars); ci.appendChild(hint);
+  var imgs = [], i = 0, t = null, built = false;
+  function build(){
+    if (built) return; built = true;
+    src.forEach(function(p){ var im = new Image(); im.alt = ""; im.decoding = "async"; im.src = p.replace("/g/", "/g/s/"); cs.appendChild(im); imgs.push(im); });
+  }
+  function paint(){
+    imgs.forEach(function(im, k){ im.classList.toggle("on", k === i); });
+    [].forEach.call(bars.children, function(el, k){
+      el.classList.remove("run"); el.classList.toggle("done", k < i);
+    });
+    var cur = bars.children[i]; void cur.offsetWidth; cur.style.setProperty("--dur", STEP + "ms"); cur.classList.add("run");
+    b.dataset.at = i;
+  }
+  function tick(){ i = (i + 1) % src.length; paint(); }
+  function start(){
+    if (RED || t) return; build(); card.classList.add("play");
+    i = src.length > 1 ? 1 : 0; paint(); t = setInterval(tick, STEP);
+  }
+  function stop(){
+    clearInterval(t); t = null; card.classList.remove("play");
+    imgs.forEach(function(im){ im.classList.remove("on"); }); b.dataset.at = 0;
+  }
+  if (HOVER) { ci.addEventListener("mouseenter", start); ci.addEventListener("mouseleave", stop); }
+  else if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function(es){ es.forEach(function(e){ e.isIntersecting ? start() : stop(); }); }, {threshold: .7}).observe(ci);
+  }
+});
 })();
