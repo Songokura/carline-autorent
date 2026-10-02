@@ -1,9 +1,8 @@
 /* ============================================================
    CARLINE AUTORENT - скрипт страницы.
-   Плиты (герой: подача машины на интро, отъезд с красным следом по
-   скроллу; плиты классов: подача кадра по --enter с лучом фар и кивком
-   торможения) · перевод RU/EN, казахский словарь грузится отдельным
-   файлом по кнопке KZ · меню · бегущая лента · фильтр каталога ·
+   Герой - живой шоурум (машины парка сменяют друг друга) · плиты в
+   обычной прокрутке · перевод RU/EN, казахский словарь грузится отдельным
+   файлом по кнопке KZ · меню ·
    WhatsApp с названием машины · форма в WhatsApp. Библиотек нет.
    ============================================================ */
 (function(){
@@ -27,23 +26,23 @@ function conv(key, item){
 /* ---------------- АНГЛИЙСКИЙ СЛОВАРЬ ---------------- */
 var EN = {
   "m.title":"Car Rental in Astana without a Driver from 15,000 KZT per Day - Carline Autorent",
-  "m.desc":"Self-drive car rental in Astana: 8 cars from economy to business class, from 15,000 KZT per day. Minimal deposit, clean and serviced cars, delivery across the city, WhatsApp reply within 5 minutes. Open daily 10:00-22:00.",
+  "m.desc":"Self-drive car rental in Astana: 8 sedans and a crossover from 15,000 KZT per day. Minimal deposit, clean and serviced cars, delivery across the city, WhatsApp reply within 5 minutes. Open daily 10:00-22:00.",
   "m.ogt":"Carline Autorent - self-drive car rental in Astana",
   "a.menu":"Menu","a.home":"Carline Autorent - home","a.nav":"Sections","a.lang":"Site language","a.call":"Call","a.mnav":"Mobile menu",
-  "a.hero":"Self-drive car rental in Astana","a.ek":"Economy class","a.ko":"Comfort class","a.bi":"Business class","a.su":"SUV","a.park":"Fleet and prices","a.filter":"Filter by class","a.dost":"Car delivery across the city","a.usl":"Rental terms","a.kak":"How to rent","a.faq":"FAQ","a.zay":"Booking request","a.kont":"Contacts","a.bar":"Quick contact",
+  "a.hero":"Self-drive car rental in Astana","a.reel":"Cars in the fleet","a.ek":"Economy class","a.ko":"Comfort class","a.bi":"Business class","a.su":"SUV","a.park":"Fleet and prices","a.filter":"Filter by class","a.dost":"Car delivery across the city","a.usl":"Rental terms","a.kak":"How to rent","a.faq":"FAQ","a.zay":"Booking request","a.kont":"Contacts","a.bar":"Quick contact",
   "n.park":"Fleet","n.usl":"Terms","n.dost":"Delivery","n.kak":"How to rent","n.faq":"FAQ","n.kont":"Contacts",
   "mn.ek":"Economy","mn.ko":"Comfort","mn.bi":"Business","mn.su":"SUV",
   "b.wa":"Message on WhatsApp","b.call":"Call","b.book":"Book now","b.cars":"Cars in this class","b.bookwa":"Book on WhatsApp",
   "w.from":"from","w.day":"KZT / day","w.cur":"","w.curf":"",
-  "h.kicker":"Astana · self-drive rental","h.kicker2":"· daily 10:00-22:00",
-  "h.l1":"Car rental","h.l2":"without a driver in Astana",
-  "h.lead":"8 cars from economy to business class, from 15,000 KZT per day. Minimal deposit, delivery across the city, WhatsApp reply within 5 minutes.",
-  "h.b1":"Book on WhatsApp","h.b2":"See the fleet","h.ig":"Our fleet on Instagram",
+  "h.kw":"Self-drive car rental in Astana",
+  "h.l1":"Like your own.","h.l2":"Minus the hassle.",
+  "h.lead":"8 cars from 15,000 KZT per day. Minimal deposit, delivery across the city, WhatsApp reply within 5 minutes.",
+  "h.b1":"Book on WhatsApp","h.b2":"Choose a car","h.ig":"Our fleet on Instagram",
   "c1.k":"Economy","c1.h":"Chevrolet Cobalt 2026","c1.l":"For the city and errands: affordable, economical, always clean.",
   "c2.k":"Comfort","c2.h":"Hyundai Elantra and Toyota Camry 55","c2.l":"Comfortable sedans for every day, meetings and family trips.",
   "c3.k":"Business","c3.h":"Toyota Camry 70, Kia K5 and Camry 80","c3.l":"Executive sedans for business trips, meetings and events.",
   "c4.k":"SUV","c4.h":"Hyundai Santa Fe","c4.l":"A spacious crossover for the family, city guests and trips out of town.",
-  "p.k":"Fleet","p.h":"8 cars, prices per day","p.l":"Discounts are already included. Tap \"Book\" - WhatsApp opens with the name of the chosen car.",
+  "p.k":"Fleet","p.h":"Choose your car","p.l":"8 cars, prices per day, discounts already included. Tap \"Book\" - WhatsApp opens with the name of the chosen car.",
   "f.all":"All","f.ek":"Economy","f.ko":"Comfort","f.bi":"Business","f.su":"SUV",
   "ph.t":"Car photo",
   "car.cobalt":"Chevrolet Cobalt","car.elantra":"Hyundai Elantra","car.camry55":"Toyota Camry 55","car.camry70p":"Toyota Camry 70 Prestige","car.camry70l":"Toyota Camry 70 Luxe","car.k5":"Kia K5","car.camry80":"Toyota Camry 80","car.santafe":"Hyundai Santa Fe",
@@ -54,7 +53,7 @@ var EN = {
   "d.b":"Order delivery","dp.city":"Across the city","dp.air":"To the airport","dp.u":"KZT","dp.u2":"KZT","d.b2":"Rental terms",
   "u.k":"Terms","u.h":"What you need to rent","u.l":"The essentials in short. Exact amounts and requirements for your car - from the manager on WhatsApp.",
   "u1.h":"Documents","u1.t":"ID and a driving licence. Full list - from the manager.",
-  "u2.h":"Deposit","u2.t":"Among the lowest on the market. Depends on the car class - confirmed at booking.",
+  "u2.h":"Deposit","u2.t":"Among the lowest on the market. Depends on the car - confirmed at booking.",
   "u3.h":"Age and experience","u3.t":"Age and driving experience requirements - ask the manager.",
   "u4.h":"Rental period","u4.t":"From one day. Extension by WhatsApp message, no office visit.",
   "w.k":"Why Carline","w1":"Minimal deposit","w2":"Clean and serviced cars","w3":"Delivery across the city","w4":"WhatsApp reply within 5 minutes",
@@ -64,7 +63,7 @@ var EN = {
   "k3.h":"Contract and deposit","k3.t":"Signed at pickup, the deposit is minimal",
   "k4.h":"Get the keys","k4.t":"At our office on Koshkarbayev 10/1 or with delivery",
   "q.k":"FAQ","q.h":"Frequently asked questions",
-  "q1.q":"What is the deposit and when is it returned?","q1.a":"The deposit is minimal and depends on the car class. It is returned after the car is checked in. The manager will name the exact amount.",
+  "q1.q":"What is the deposit and when is it returned?","q1.a":"The deposit is minimal and depends on the car. It is returned after the car is checked in. The manager will name the exact amount.",
   "q2.q":"Which documents do I need?","q2.a":"ID and a driving licence. If there are special requirements for your car, we will tell you at booking.",
   "q3.q":"Do you deliver the car?","q3.a":"Yes. Across Astana - 5,000 KZT, to the airport - 10,000 KZT. You send the address and time, we arrive, sign the contract on the spot and hand over the car.",
   "q4.q":"Can I extend the rental?","q4.a":"Yes, message us on WhatsApp before the end of the term - we extend without an office visit if the car is free.",
@@ -185,21 +184,51 @@ burger.addEventListener("click", function(){
 });
 document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeMenu(); });
 
-/* ---------------- ФИЛЬТР КАТАЛОГА ---------------- */
-var CLASSES = ["ekonom","komfort","biznes","vnedorozhnik"];
-function setFilter(f){
-  if (!f || (f !== "all" && CLASSES.indexOf(f) < 0)) f = "all";
-  document.querySelectorAll(".filter button").forEach(function(b){
-    var on = b.dataset.f === f;
-    b.classList.toggle("is-on", on); b.setAttribute("aria-pressed", on ? "true" : "false");
-  });
-  document.querySelectorAll("#cards .card").forEach(function(c){
-    var show = f === "all" || c.dataset.cls === f;
-    c.hidden = !show;
-    if (show && !c.classList.contains("in") && c.getBoundingClientRect().top < innerHeight) c.classList.add("in");
-  });
-}
-document.querySelectorAll(".filter button").forEach(function(b){ b.addEventListener("click", function(){ setFilter(b.dataset.f); }); });
+/* ---------------- ГЕРОЙ: ЖИВОЙ ШОУРУМ ----------------
+   Машины парка сменяют друг друга: кадр медленно наезжает (CSS kb), смена - наплыв 1.4 с.
+   Подпись с ценой ведёт на карточку, полоски снизу переключают машину. Вне экрана и
+   во вкладке в фоне показ стоит. При reduced-motion - без смены, только по полоскам. */
+(function(){
+  var hero = document.querySelector(".hero"), reel = document.getElementById("reel");
+  if (!hero || !reel) return;
+  var sl = [].slice.call(reel.querySelectorAll(".sl"));
+  var caps = [].slice.call(hero.querySelectorAll(".rc"));
+  var bars = [].slice.call(hero.querySelectorAll(".rbars button"));
+  var DUR = 6000, i = 0, t = null, left = DUR, t0 = 0, seen = true;
+  function show(n){
+    var prev = i; i = (n + sl.length) % sl.length;
+    if (prev !== i) {
+      sl.forEach(function(el){ el.classList.remove("out"); });
+      sl[prev].classList.remove("is-on"); sl[prev].classList.add("out");
+      setTimeout(function(){ if (!sl[prev].classList.contains("is-on")) sl[prev].classList.remove("out"); }, 1500);
+      var img = sl[i].querySelector("img"); if (img) img.loading = "eager";
+    }
+    sl[i].classList.add("is-on");
+    caps.forEach(function(c, k){ c.classList.toggle("is-on", k === i); });
+    bars.forEach(function(b, k){
+      b.classList.remove("run"); b.classList.toggle("done", k < i);
+      b.setAttribute("aria-pressed", k === i ? "true" : "false");
+    });
+    if (!RED) { void bars[i].offsetWidth; bars[i].style.setProperty("--dur", DUR + "ms"); bars[i].classList.add("run"); }
+    else bars[i].classList.add("done");
+    left = DUR; arm();
+  }
+  function arm(){
+    clearTimeout(t); t = null;
+    if (RED || !seen || document.hidden) { hero.classList.add("paused"); return; }
+    hero.classList.remove("paused"); t0 = Date.now();
+    t = setTimeout(function(){ show(i + 1); }, left);
+  }
+  function pause(){ if (t) { left = Math.max(300, left - (Date.now() - t0)); } clearTimeout(t); t = null; hero.classList.add("paused"); }
+  bars.forEach(function(b, k){ b.addEventListener("click", function(){ show(k); }); });
+  document.addEventListener("visibilitychange", function(){ document.hidden ? pause() : arm(); });
+  if ("IntersectionObserver" in window) new IntersectionObserver(function(es){
+    seen = es[0].isIntersecting; seen ? arm() : pause();
+  }, {threshold: .2}).observe(hero);
+  /* остальные кадры подгружаем после первой отрисовки, чтобы смена не мигала пустотой */
+  addEventListener("load", function(){ sl.forEach(function(el){ var im = el.querySelector("img"); if (im) im.loading = "eager"; }); });
+  show(0);
+})();
 
 /* ---------------- ЯКОРЯ ---------------- */
 function goTo(id, push){
@@ -214,7 +243,6 @@ function goTo(id, push){
 document.addEventListener("click", function(e){
   var a = e.target.closest ? e.target.closest("[data-go]") : null; if (!a) return;
   e.preventDefault();
-  if (a.dataset.filter) setFilter(a.dataset.filter);
   goTo(a.dataset.go);
 });
 
@@ -368,10 +396,10 @@ snapshot();
 initLang();
 hdrState();
 fitAll();
-/* прямой переход по якорю: встать на блок, интро пропущено выше; класс в хэше включает фильтр */
+/* прямой переход по якорю: встать на блок, интро пропущено выше; старый якорь класса ведёт в каталог */
 if (location.hash) {
   var hid = location.hash.slice(1);
-  if (CLASSES.indexOf(hid) >= 0) setFilter(hid);
+  if (/^(ekonom|komfort|biznes|vnedorozhnik)$/.test(hid)) hid = "avtopark";   /* старые якоря классов, убраны 02.10.2026 */
   if (document.getElementById(hid)) {
     setTimeout(function(){ goTo(hid, false); }, 60);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ if (location.hash.slice(1) === hid) goTo(hid, false); });
