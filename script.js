@@ -273,7 +273,7 @@ function update(){
     } else {
       var p = clamp((enter - .1) / .78);
       setDrive(pw, drive(p));
-      pw.classList.toggle("on", enter > .66);
+      pw.classList.toggle("on", enter > .3);
     }
   });
   hdrState();
@@ -282,8 +282,8 @@ function update(){
     bar.classList.toggle("show", scrollY > H * 0.55 && !onKont);
   }
 }
+root.classList.add("no-plate");   /* плиты - обычная прокрутка, без наезда и подачи кадра */
 if (RED) {
-  root.classList.add("no-plate");
   pws.forEach(function(pw){ pw.classList.add("on"); });
   addEventListener("scroll", function(){ hdrState(); if (bar) bar.classList.toggle("show", scrollY > innerHeight * 0.55); }, {passive:true});
   hdrState();
@@ -297,7 +297,7 @@ if (RED) {
   addEventListener("load", update);
   /* интро 1250 мс: машина подаётся слева, впереди свет фар, тормозит с кивком; текст поднимается.
      Пропускаем при хэше / прокрутке - человек из рекламы сразу видит собранный экран. */
-  var skip = location.hash || scrollY > 80;
+  var skip = true;   /* 02.10.2026: подача машины на интро и наезд плит убраны по просьбе клиента */
   if (skip) {
     update();
   } else {
