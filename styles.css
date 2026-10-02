@@ -209,6 +209,13 @@ html[lang="kk"] .rc [data-i="w.day"]{order:-1}
 .spec{font-size:13px;color:var(--mute)}
 .cprice{margin:8px 0 16px;font:500 32px/1 var(--fd);letter-spacing:.01em}
 .cprice b{font-weight:700}
+/* цены по сроку аренды: три ступени под ценой за сутки */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%;margin:-4px 0 18px;padding:0}
+.tiers div{padding:10px 4px 9px;border:1px solid rgba(14,15,17,.12);border-radius:12px;background:rgba(14,15,17,.03)}
+.tiers dt{font:600 9.5px/1.2 var(--ft);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.tiers dd{margin:5px 0 0;font:700 19px/1 var(--fd);letter-spacing:.01em;font-variant-numeric:lining-nums;color:var(--ink)}
+.tiers div:last-child{border-color:rgba(200,16,46,.35);background:rgba(200,16,46,.05)}
+.tiers div:last-child dd{color:var(--red)}
 .cprice span{font:600 11px/1 var(--ft);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 .card .btn{margin-top:auto;width:100%;padding:0 14px}
 .pnote{text-align:center;font-size:13px;color:var(--mute);margin-top:26px}
