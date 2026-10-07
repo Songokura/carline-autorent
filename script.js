@@ -76,6 +76,7 @@ var EN = {
   "kt.hrs":"24/7, no days off","kt.2gis":"We are on 2GIS","kt.addr":"Rakymzhan Koshkarbayev Ave., 10/1, Astana","kt.map":"Map: Carline Autorent, Koshkarbayev 10/1","kt.route":"Route on 2GIS",
   "ft.d":"Self-drive car rental in Astana.",
   "al.hero":"Black Toyota Camry 70 by Carline Autorent with headlights on at night","al.ek":"White Chevrolet Cobalt 2026 by Carline Autorent in a parking garage","al.ko":"White Hyundai Elantra 2024 by Carline Autorent in the city","al.bi":"Black Toyota Camry 70 Prestige by Carline Autorent in a parking garage","al.su":"Grey Hyundai Santa Fe by Carline Autorent, rear view","al.dost":"Airport terminal at night - car delivery to your flight",
+  "ph.n":"Photo",
   "al.elantra":"White Hyundai Elantra 2024 by Carline Autorent","al.camry55":"Black Toyota Camry 55 by Carline Autorent with headlights on","al.camry70p":"Black Toyota Camry 70 Prestige by Carline Autorent in a parking garage","al.camry70l":"Black Toyota Camry 70 Luxe by Carline Autorent by a building in the evening","al.camry80":"Black Toyota Camry 80 by Carline Autorent","al.cobalt":"White Chevrolet Cobalt 2026 by Carline Autorent","g.btn":"All photos","g.hint":"Click to open the gallery","g.soon":"Photo coming soon","g.s1":"Interior: front row","g.s2":"Interior: rear row","g.s3":"Trunk","g.aria":"Car photos","g.close":"Close","g.prev":"Previous photo","g.next":"Next photo","al.k5":"Grey Kia K5 in a parking garage","al.santafe":"Grey Hyundai Santa Fe by Carline Autorent, front view",
   "h.tg":"Message on Telegram","p.sl":"The longer the rental, the better the price","t.1":"1 day","w.tg":"KZT","a.term":"Rental period","a.sub":"Car sublease","n.sub":"Sublease","sb.k":"For car owners","sb.h":"Sublease your car to us","sb.l":"Your car works and earns, while we take care of clients, contracts and handovers.","sb1":"We find renters and hand over the car","sb2":"An official contract with the owner","sb3":"We keep an eye on the car's condition","sb.more":"Learn more","sb.wa":"Offer a car",
   "mq.list":"Chevrolet Cobalt|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|from 15,000 KZT per day|Delivery from 5,000 KZT"
@@ -386,9 +387,8 @@ if (location.hash) {
   }
 }
 
-/* ---------------- ГАЛЕРЕЯ МАШИНЫ ----------------
-   Слайд - путь к фото или {ph:"ключ подписи"} (заглушка до фото клиента:
-   чтобы заменить, вписать вместо неё путь к файлу). */
+/* ---------------- ФОТО МАШИН ----------------
+   Кадры галерей клиента: assets/img/g/ (полные) и assets/img/g/s/ (лёгкие копии для альбома). */
 var GV = "?v=20260929-9";
 var GAL = {
   cobalt:   {t:"car.cobalt",   s:[1,2,3,4,5,6,7,8].map(function(n){ return "assets/img/g/cobalt-" + n + ".webp" + GV; })},
@@ -399,108 +399,52 @@ var GAL = {
   camry80:  {t:"car.camry80",  s:[1,2,3,4,5,6,7,8].map(function(n){ return "assets/img/g/camry80-" + n + ".webp" + GV; })},
   santafe:  {t:"car.santafe",  s:[1,2,3,4,5,6,7,8].map(function(n){ return "assets/img/g/santafe-" + n + ".webp" + GV; })}
 };
-RU["g.s1"] = "Салон: передний ряд"; RU["g.s2"] = "Салон: задний ряд"; RU["g.s3"] = "Багажник";
-var lb = document.getElementById("lb");
-if (lb) {
-  var lbImg = lb.querySelector(".lb-img"), lbPh = lb.querySelector(".lb-ph"), lbPhT = lb.querySelector(".lb-ph-t"),
-      lbT = lb.querySelector(".lb-t"), lbN = lb.querySelector(".lb-n"),
-      lbPrev = lb.querySelector(".lb-prev"), lbNext = lb.querySelector(".lb-next"), lbX = lb.querySelector(".lb-x"),
-      cur = null, idx = 0, back = null;
-  var show = function(i){
-    var sl = cur.s; idx = Math.max(0, Math.min(sl.length - 1, i));
-    var it = sl[idx];
-    if (typeof it === "string") {
-      lbPh.hidden = true; lbImg.hidden = false; lbImg.src = it; lbImg.alt = tr(cur.t) + " - " + (idx + 1);
-    } else {
-      lbImg.hidden = true; lbImg.removeAttribute("src"); lbPh.hidden = false; lbPhT.textContent = tr(it.ph);
-    }
-    lbN.textContent = (idx + 1) + " / " + sl.length;
-    lbPrev.disabled = idx === 0; lbNext.disabled = idx === sl.length - 1;
-    [idx - 1, idx + 1].forEach(function(j){ if (typeof sl[j] === "string") { var im = new Image(); im.src = sl[j]; } });
-  };
-  var open = function(key, from, at){
-    cur = GAL[key]; if (!cur) return;
-    back = from; lbT.textContent = tr(cur.t);
-    lb.hidden = false; document.body.classList.add("lb-open");
-    show(at || 0); lbX.focus();
-  };
-  var close = function(){
-    lb.hidden = true; document.body.classList.remove("lb-open"); lbImg.removeAttribute("src");
-    if (back) back.focus();
-  };
-  document.addEventListener("click", function(e){
-    var b = e.target.closest && e.target.closest(".gal-btn");
-    if (b) { e.preventDefault(); open(b.dataset.gal, b, +(b.dataset.at || 0)); return; }
-  });
-  lbPrev.addEventListener("click", function(){ show(idx - 1); });
-  lbNext.addEventListener("click", function(){ show(idx + 1); });
-  lbX.addEventListener("click", close);
-  lb.addEventListener("click", function(e){ if (e.target === lb || e.target.classList.contains("lb-stage")) close(); });
-  document.addEventListener("keydown", function(e){
-    if (lb.hidden) return;
-    if (e.key === "Escape") close();
-    else if (e.key === "ArrowLeft") show(idx - 1);
-    else if (e.key === "ArrowRight") show(idx + 1);
-  });
-  var tx = null;
-  lb.addEventListener("touchstart", function(e){ tx = e.touches[0].clientX; }, {passive:true});
-  lb.addEventListener("touchend", function(e){
-    if (tx == null) return; var dx = e.changedTouches[0].clientX - tx; tx = null;
-    if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
-  }, {passive:true});
-}
-
 /* ---------------- АЛЬБОМ В КАРТОЧКЕ ----------------
-   До 5 фото прямо в карточке: обложка + 4 кадра галереи (ALB - номера кадров в GAL[...].s).
-   Стрелки и точки, свайп на телефоне, стрелки клавиатуры на фокусе. Клик по фото -
-   галерея на этом кадре. Лёгкие копии - assets/img/g/s/. */
+   5 фото прямо в карточке: обложка + 4 кадра галереи (ALB - номера кадров в GAL[...].s).
+   Листание только стрелками, точками и свайпом - наведение ничего не переключает.
+   Кадры подгружаются заранее, когда карточка подъезжает к экрану. Лёгкие копии - assets/img/g/s/. */
 var ALB = {cobalt:[2,3,5,6], elantra:[2,3,5,6], camry55:[4,5,6,7], camry70p:[2,3,5,7], camry70l:[3,5,6,8], camry80:[3,5,6,8], santafe:[3,6,7,8]};
-document.querySelectorAll(".gal-btn").forEach(function(b){
-  var key = b.dataset.gal, g = GAL[key], picks = ALB[key]; if (!g || !picks) return;
-  var card = b.closest(".card"), ci = b.parentNode, cover = ci.querySelector("img");
-  card.classList.add("has-gal");
-  var frames = [{src: null, at: 0}].concat(picks.map(function(n){
-    var k = g.s.findIndex(function(x){ return x.indexOf("-" + n + ".webp") > 0; });
-    return {src: g.s[k].replace("/g/", "/g/s/"), at: k};
-  }));
+var albIO = HAS_IO ? new IntersectionObserver(function(es){
+  es.forEach(function(e){ if (e.isIntersecting) { e.target._alb(); albIO.unobserve(e.target); } });
+}, {rootMargin: "300px 0px"}) : null;
+document.querySelectorAll(".cimg[data-gal]").forEach(function(ci){
+  var key = ci.dataset.gal, g = GAL[key], picks = ALB[key]; if (!g || !picks) return;
+  var srcs = picks.map(function(n){ return "assets/img/g/s/" + key + "-" + n + ".webp" + GV; });
+  var N = srcs.length + 1, i = 0, imgs = [null], built = false;
   var alb = document.createElement("div"); alb.className = "alb";
-  var dots = document.createElement("div"); dots.className = "alb-dots"; dots.setAttribute("aria-hidden", "true");
+  var dots = document.createElement("div"); dots.className = "alb-dots";
   var prev = document.createElement("button"), next = document.createElement("button");
   prev.type = next.type = "button"; prev.className = "alb-nav alb-prev"; next.className = "alb-nav alb-next";
   prev.setAttribute("data-i-aria", "g.prev"); next.setAttribute("data-i-aria", "g.next");
   prev.setAttribute("aria-label", tr("g.prev") || "Предыдущее фото"); next.setAttribute("aria-label", tr("g.next") || "Следующее фото");
   prev.innerHTML = next.innerHTML = '<svg width="18" height="18" aria-hidden="true"><use href="#ic-arr"/></svg>';
-  frames.forEach(function(){ dots.appendChild(document.createElement("i")); });
+  for (var k = 0; k < N; k++) (function(k){
+    var d = document.createElement("button"); d.type = "button";
+    d.setAttribute("aria-label", (tr("ph.n") || "Фото") + " " + (k + 1));
+    d.addEventListener("click", function(){ go(k); });
+    dots.appendChild(d);
+  })(k);
   ci.appendChild(alb); ci.appendChild(dots); ci.appendChild(prev); ci.appendChild(next);
-  var imgs = [], i = 0, built = false;
   function build(){
     if (built) return; built = true;
-    frames.forEach(function(f, k){
-      if (!k) { imgs.push(null); return; }
-      var im = new Image(); im.alt = ""; im.decoding = "async"; im.src = f.src; alb.appendChild(im); imgs.push(im);
-    });
+    srcs.forEach(function(src){ var im = new Image(); im.alt = ""; im.decoding = "async"; im.src = src; alb.appendChild(im); imgs.push(im); });
   }
+  ci._alb = build;
   function go(n){
-    if (n !== 0) build();
-    i = Math.max(0, Math.min(frames.length - 1, n));
+    build(); i = (n + N) % N;                                  /* по кругу: с последнего на обложку */
     imgs.forEach(function(im, k){ if (im) im.classList.toggle("on", k === i); });
-    [].forEach.call(dots.children, function(d, k){ d.classList.toggle("on", k === i); });
-    prev.disabled = i === 0; next.disabled = i === frames.length - 1;
-    b.dataset.at = frames[i].at;
+    [].forEach.call(dots.children, function(d, k){ d.classList.toggle("on", k === i); d.setAttribute("aria-current", k === i ? "true" : "false"); });
   }
-  prev.addEventListener("click", function(e){ e.stopPropagation(); go(i - 1); });
-  next.addEventListener("click", function(e){ e.stopPropagation(); go(i + 1); });
-  ci.addEventListener("mouseenter", build, {once: true});
-  var tx = null;
-  ci.addEventListener("touchstart", function(e){ tx = e.touches[0].clientX; build(); }, {passive: true});
+  prev.addEventListener("click", function(){ go(i - 1); });
+  next.addEventListener("click", function(){ go(i + 1); });
+  var tx = null, ty = null;
+  ci.addEventListener("touchstart", function(e){ tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive: true});
   ci.addEventListener("touchend", function(e){
-    if (tx == null) return; var dx = e.changedTouches[0].clientX - tx; tx = null;
-    if (Math.abs(dx) > 40) { go(i + (dx < 0 ? 1 : -1)); ci.dataset.swiped = "1"; setTimeout(function(){ delete ci.dataset.swiped; }, 350); }
+    if (tx == null) return;
+    var dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty; tx = null;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) go(i + (dx < 0 ? 1 : -1));
   }, {passive: true});
-  ci.addEventListener("click", function(e){
-    if (ci.dataset.swiped || e.target.closest(".alb-nav,.gal-btn")) return;
-    b.click();
-  });
+  if (albIO) albIO.observe(ci); else build();
   go(0);
 });
 

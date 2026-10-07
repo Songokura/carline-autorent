@@ -16,7 +16,7 @@ const RED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const SNAP = /[?&]snap=1/.test(location.search);           /* служебно: кадр для постера */
 const BG = 0x000000;                                         /* чистый чёрный: пол и фон без шва на горизонте */
 
-const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, preserveDrawingBuffer: SNAP, powerPreference: "high-performance" });
+const renderer = new THREE.WebGLRenderer({ antialias: !matchMedia("(max-width:760px)").matches || (devicePixelRatio || 1) < 2, alpha: false, preserveDrawingBuffer: SNAP, powerPreference: "high-performance" });
 renderer.setClearColor(BG, 1);
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1.0;
@@ -59,8 +59,10 @@ scene.add(new THREE.HemisphereLight(0xf2f2f0, 0x101012, 1.1));
 const fill = new THREE.DirectionalLight(0xffffff, 1.3); fill.position.set(2, 3, 8); scene.add(fill);
 
 /* ---------- мокрый пол: зеркало + затемнение к краям ---------- */
+const MOB = matchMedia("(max-width:760px)").matches;
+const RT = MOB ? 384 : 640;                                       /* отражение под затемнением: высокое разрешение не видно, а стоит кадров */
 const mirror = new Reflector(new THREE.CircleGeometry(40, 64), {
-  textureWidth: 1024, textureHeight: 1024, color: 0x6a6a6a, clipBias: 0.003
+  textureWidth: RT, textureHeight: RT, color: 0x6a6a6a, clipBias: 0.003
 });
 mirror.rotation.x = -Math.PI / 2; scene.add(mirror);
 const fadeTex = (() => {
@@ -113,6 +115,10 @@ loader.load(SRC, (gltf) => {
       });
     } else if (o.material) {
       o.material.envMapIntensity = 1.1;
+      if (o.material.transmission) {                             /* стёкла без преломления: transmission = лишний проход сцены каждый кадр */
+        o.material.transmission = 0; o.material.transparent = true; o.material.opacity = 0.42;
+        o.material.roughness = 0.02; o.material.depthWrite = false;
+      }
       if (/LED|RGLASS|SIGNALS/.test(n)) {                       /* фонари светятся */
         o.material.emissive = new THREE.Color(/SIGNALS/.test(n) ? 0xff8a1e : 0xff2236);
         o.material.emissiveIntensity = /RGLASS/.test(n) ? 1.4 : 2.2;
@@ -129,6 +135,7 @@ loader.load(SRC, (gltf) => {
   car.position.x -= c.x; car.position.z -= c.z; car.position.y -= b.min.y;
   turn.add(car);
   turn.rotation.y = -0.62;
+  renderer.compile(scene, camera);                               /* шейдеры заранее - без рывка на первом обороте */
   box.classList.add("ready");
   window.__dims = [size.x, size.y, size.z].map((v) => v.toFixed(2)).join("x");
   draw();
@@ -138,7 +145,7 @@ loader.load(SRC, (gltf) => {
 /* ---------- кадр: на десктопе машина правее центра, на телефоне по центру ---------- */
 function frame(){
   const w = box.clientWidth, h = box.clientHeight;
-  const dpr = Math.min(devicePixelRatio || 1, w < 760 ? 1.6 : 1.75);
+  const dpr = Math.min(devicePixelRatio || 1, w < 760 ? 1.5 : 1.5);
   renderer.setPixelRatio(dpr); renderer.setSize(w, h, false);
   camera.aspect = w / h;
   const mob = w / h < 1;
