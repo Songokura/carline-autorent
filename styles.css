@@ -420,7 +420,7 @@ html[lang="kk"] .price [data-i="w.from"]{order:5}
 .hsoc a:hover{border-color:rgba(255,255,255,.5);background:rgba(14,15,17,.6)}
 .hsoc svg{flex:0 0 auto}
 .hsoc .i-wa{color:var(--wa)}
-.hsoc .i-tg{color:#2AABEE}
+.hsoc .i-tg,.kbtns .i-tg{color:#2AABEE}
 .hsoc b{font:700 12px/1 var(--ft);letter-spacing:.12em;text-transform:uppercase;min-width:86px}
 .hsoc span{font-size:13px;color:var(--silver);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:760px){
