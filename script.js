@@ -198,22 +198,15 @@ burger.addEventListener("click", function(){
 });
 document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeMenu(); });
 
-/* ---------------- ГЕРОЙ: БЕЛАЯ CAMRY 80 В 3D ----------------
-   <model-viewer> (Google, с jsdelivr) подключаем после загрузки страницы: первым экраном
-   стоит постер того же ракурса, модель 3 МБ не мешает загрузке. Медленно крутится сама,
-   жестами не управляется (скролл на телефоне не перехватывает). Reduced motion - без вращения.
-   Модель: «toyota camry v80» by s122, CC BY 4.0 (подпись в подвале), кузов перекрашен в белый. */
+/* ---------------- ГЕРОЙ: БЕЛАЯ CAMRY 80 В СТУДИИ ----------------
+   Сцена three.js - assets/js/hero3d.js (лак, софтбоксы, мокрый пол). Подключаем после
+   загрузки страницы: первым экраном стоит постер - кадр той же сцены. Нет WebGL - остаётся постер. */
 (function(){
-  var mv = document.getElementById("mv"); if (!mv) return;
-  if (RED) mv.removeAttribute("auto-rotate");
-  mv.addEventListener("load", function(){ mv.classList.add("ready"); });
-  function boot(){
-    var s = document.createElement("script"); s.type = "module";
-    s.src = "https://cdn.jsdelivr.net/npm/@google/model-viewer@4.0.0/dist/model-viewer.min.js";
-    document.head.appendChild(s);
-  }
-  if (document.readyState === "complete") setTimeout(boot, 200);
-  else addEventListener("load", function(){ setTimeout(boot, 200); });
+  if (!document.getElementById("stage3d")) return;
+  function ok(){ try { var c = document.createElement("canvas"); return !!(c.getContext("webgl2") || c.getContext("webgl")); } catch(e){ return false; } }
+  function boot(){ if (ok()) import("./assets/js/hero3d.js" + (ASSET_V ? "?v=" + ASSET_V : "")).catch(function(){}); }
+  if (document.readyState === "complete") setTimeout(boot, 150);
+  else addEventListener("load", function(){ setTimeout(boot, 150); });
 })();
 
 /* ---------------- ЯКОРЯ ---------------- */

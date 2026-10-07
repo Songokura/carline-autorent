@@ -496,22 +496,20 @@ body.lb-open{overflow:hidden}
   .lang button{padding:6px 8px}
 }
 
-/* ---------- герой: белая Camry 80 в 3D на тёмной сцене (07.10.2026) ---------- */
-.stage{background:radial-gradient(70% 55% at 72% 62%,#2a2d32 0%,#15171a 45%,#0a0b0c 80%)}
-.stage::before{content:"";position:absolute;left:40%;right:-6%;top:56%;height:30%;background:radial-gradient(50% 50% at 50% 40%,rgba(227,23,47,.34),rgba(200,16,46,.08) 55%,transparent 75%);filter:blur(10px)}
-.stage::after{background:linear-gradient(90deg,rgba(10,11,12,.7),rgba(10,11,12,0) 48%),linear-gradient(180deg,rgba(10,11,12,.5) 0%,transparent 22%,transparent 78%,rgba(10,11,12,.75) 100%)!important}
-.st-car{position:absolute;z-index:1;right:-4vw;top:50%;width:min(68vw,1220px);aspect-ratio:16/9;transform:translateY(-44%)}
-.st-car model-viewer{display:block;width:100%;height:100%;background:transparent;--poster-color:transparent}
-.st-car model-viewer:not(:defined){background:url("assets/3d/camry80-poster.webp?v=20261007-1") center/contain no-repeat}
+/* ---------- герой: белая Camry 80 в студии, three.js (07.10.2026) ---------- */
+.stage{background:#000}
+.st3d{position:absolute;inset:0;z-index:0}
+.st3d canvas{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0;transition:opacity .9s ease}
+.st3d.ready canvas{opacity:1}
+.st-poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stage::after{background:linear-gradient(90deg,rgba(10,11,12,.72),rgba(10,11,12,.2) 40%,rgba(10,11,12,0) 55%),linear-gradient(180deg,rgba(10,11,12,.55) 0%,transparent 20%)!important}
 .hero .hero-txt{flex:0 1 680px}
 .h-l1,.h-l2{font-size:clamp(44px,min(5.6vw,11svh),104px)}
 .hero .reel-ui{flex:0 0 300px}
 .foot-cr{flex-basis:100%;text-align:center;font-size:11px;color:var(--steel)}
 .foot-cr a{text-decoration:underline;text-underline-offset:2px}
 @media (max-width:760px){
-  .st-car{right:-16vw;left:-16vw;width:auto;top:29%;transform:none}
-  .stage::before{left:0;right:0;top:44%;height:22%}
-  .stage::after{background:linear-gradient(180deg,rgba(10,11,12,.55) 0%,transparent 28%,transparent 62%,rgba(10,11,12,.85) 80%)!important}
+  .stage::after{background:linear-gradient(180deg,rgba(10,11,12,.6) 0%,rgba(10,11,12,.15) 30%,transparent 40%,transparent 62%,rgba(10,11,12,.8) 80%)!important}
   .h-l1,.h-l2{font-size:clamp(36px,11.6vw,54px)}
   .hero .reel-ui{display:none}
 }

@@ -30,8 +30,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@500;600;700&family=Mulish:wght@400;500;600;700;800&display=swap">
-<link rel="preload" as="image" href="assets/3d/camry80-poster.webp?v=20261007-1">
-<link rel="stylesheet" href="styles.css?v=20261007-3">
+<link rel="preload" as="image" href="assets/3d/hero.webp?v=20261007-4" media="(min-width:761px)">
+<link rel="preload" as="image" href="assets/3d/hero-m.webp?v=20261007-4" media="(max-width:760px)">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<link rel="stylesheet" href="styles.css?v=20261007-4">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -134,7 +136,7 @@
 <div class="pw pw-hero" id="top">
   <section class="plate hero" aria-label="Аренда авто без водителя в Астане" data-i-aria="a.hero">
     <div class="ph stage" aria-hidden="true">
-      <div class="st-car"><model-viewer id="mv" src="assets/3d/camry80.glb?v=20261007-1" poster="assets/3d/camry80-poster.webp?v=20261007-1" camera-orbit="-35deg 80deg 84%" field-of-view="26deg" exposure="1.05" shadow-intensity="1.1" shadow-softness="0.8" environment-image="neutral" interaction-prompt="none" disable-zoom disable-pan auto-rotate auto-rotate-delay="0" rotation-per-second="-14deg" loading="eager" reveal="auto"></model-viewer></div>
+      <div class="st3d" id="stage3d" data-src="assets/3d/camry80.glb?v=20261007-1"><picture class="st-poster"><source media="(max-width:760px)" srcset="assets/3d/hero-m.webp?v=20261007-4"><img src="assets/3d/hero.webp?v=20261007-4" alt="" width="1440" height="900" fetchpriority="high" decoding="async"></picture></div>
     </div>
     <div class="hero-in">
       <div class="txt hero-txt">
@@ -443,6 +445,6 @@
   <a class="bar-ig" href="https://www.instagram.com/carline.autorent/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20"><use href="#ic-ig"/></svg></a>
 </div>
 
-<script src="script.js?v=20261007-3" defer></script>
+<script src="script.js?v=20261007-4" defer></script>
 </body>
 </html>
