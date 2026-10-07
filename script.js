@@ -198,50 +198,22 @@ burger.addEventListener("click", function(){
 });
 document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeMenu(); });
 
-/* ---------------- ГЕРОЙ: ЖИВОЙ ШОУРУМ ----------------
-   Машины парка сменяют друг друга: кадр медленно наезжает (CSS kb), смена - наплыв 1.4 с.
-   Подпись с ценой ведёт на карточку, полоски снизу переключают машину. Вне экрана и
-   во вкладке в фоне показ стоит. При reduced-motion - без смены, только по полоскам. */
+/* ---------------- ГЕРОЙ: БЕЛАЯ CAMRY 80 В 3D ----------------
+   <model-viewer> (Google, с jsdelivr) подключаем после загрузки страницы: первым экраном
+   стоит постер того же ракурса, модель 3 МБ не мешает загрузке. Медленно крутится сама,
+   жестами не управляется (скролл на телефоне не перехватывает). Reduced motion - без вращения.
+   Модель: «toyota camry v80» by s122, CC BY 4.0 (подпись в подвале), кузов перекрашен в белый. */
 (function(){
-  var hero = document.querySelector(".hero"), reel = document.getElementById("reel");
-  if (!hero || !reel) return;
-  var sl = [].slice.call(reel.querySelectorAll(".sl"));
-  var caps = [].slice.call(hero.querySelectorAll(".rc"));
-  var bars = [].slice.call(hero.querySelectorAll(".rbars button"));
-  var DUR = 6000, i = 0, t = null, left = DUR, t0 = 0, seen = true;
-  function show(n){
-    var prev = i; i = (n + sl.length) % sl.length;
-    if (prev !== i) {
-      sl.forEach(function(el){ el.classList.remove("out"); });
-      sl[prev].classList.remove("is-on"); sl[prev].classList.add("out");
-      setTimeout(function(){ if (!sl[prev].classList.contains("is-on")) sl[prev].classList.remove("out"); }, 1500);
-      var img = sl[i].querySelector("img"); if (img) img.loading = "eager";
-    }
-    sl[i].classList.add("is-on");
-    caps.forEach(function(c, k){ c.classList.toggle("is-on", k === i); });
-    bars.forEach(function(b, k){
-      b.classList.remove("run"); b.classList.toggle("done", k < i);
-      b.setAttribute("aria-pressed", k === i ? "true" : "false");
-    });
-    if (!RED) { void bars[i].offsetWidth; bars[i].style.setProperty("--dur", DUR + "ms"); bars[i].classList.add("run"); }
-    else bars[i].classList.add("done");
-    left = DUR; arm();
+  var mv = document.getElementById("mv"); if (!mv) return;
+  if (RED) mv.removeAttribute("auto-rotate");
+  mv.addEventListener("load", function(){ mv.classList.add("ready"); });
+  function boot(){
+    var s = document.createElement("script"); s.type = "module";
+    s.src = "https://cdn.jsdelivr.net/npm/@google/model-viewer@4.0.0/dist/model-viewer.min.js";
+    document.head.appendChild(s);
   }
-  function arm(){
-    clearTimeout(t); t = null;
-    if (RED || !seen || document.hidden) { hero.classList.add("paused"); return; }
-    hero.classList.remove("paused"); t0 = Date.now();
-    t = setTimeout(function(){ show(i + 1); }, left);
-  }
-  function pause(){ if (t) { left = Math.max(300, left - (Date.now() - t0)); } clearTimeout(t); t = null; hero.classList.add("paused"); }
-  bars.forEach(function(b, k){ b.addEventListener("click", function(){ show(k); }); });
-  document.addEventListener("visibilitychange", function(){ document.hidden ? pause() : arm(); });
-  if ("IntersectionObserver" in window) new IntersectionObserver(function(es){
-    seen = es[0].isIntersecting; seen ? arm() : pause();
-  }, {threshold: .2}).observe(hero);
-  /* остальные кадры подгружаем после первой отрисовки, чтобы смена не мигала пустотой */
-  addEventListener("load", function(){ sl.forEach(function(el){ var im = el.querySelector("img"); if (im) im.loading = "eager"; }); });
-  show(0);
+  if (document.readyState === "complete") setTimeout(boot, 200);
+  else addEventListener("load", function(){ setTimeout(boot, 200); });
 })();
 
 /* ---------------- ЯКОРЯ ---------------- */

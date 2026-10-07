@@ -30,9 +30,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@500;600;700&family=Mulish:wght@400;500;600;700;800&display=swap">
-<link rel="preload" as="image" href="assets/img/hero.webp?v=20260929-9" media="(min-width:761px)">
-<link rel="preload" as="image" href="assets/img/hero-m.webp?v=20260929-9" media="(max-width:760px)">
-<link rel="stylesheet" href="styles.css?v=20261007-2">
+<link rel="preload" as="image" href="assets/3d/camry80-poster.webp?v=20261007-1">
+<link rel="stylesheet" href="styles.css?v=20261007-3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -134,12 +133,8 @@
 <!-- ================= ГЕРОЙ: живой шоурум - машины парка сменяют друг друга ================= -->
 <div class="pw pw-hero" id="top">
   <section class="plate hero" aria-label="Аренда авто без водителя в Астане" data-i-aria="a.hero">
-    <div class="ph reel" id="reel">
-      <figure class="sl is-on" data-car="camry-70-luxe"><picture><source media="(max-width:760px)" srcset="assets/img/hero-m.webp?v=20261002-2"><img src="assets/img/hero.webp?v=20261002-2" alt="Чёрная Toyota Camry 70 Luxe Carline Autorent с включёнными фарами ночью" data-i-alt="al.hero" width="1800" height="1200" fetchpriority="high" decoding="async"></picture></figure>
-      <figure class="sl" data-car="elantra"><picture><source media="(max-width:760px)" srcset="assets/img/p-komfort-m.webp?v=20260929-7"><img src="assets/img/p-komfort.webp?v=20260929-7" alt="Белая Hyundai Elantra 2024 Carline Autorent в городе" data-i-alt="al.ko" width="1600" height="1000" decoding="async" loading="lazy"></picture></figure>
-      <figure class="sl" data-car="camry-70-prestige"><picture><source media="(max-width:760px)" srcset="assets/img/p-biznes-m.webp?v=20260929-11"><img src="assets/img/p-biznes.webp?v=20260929-11" alt="Чёрная Toyota Camry 70 Prestige Carline Autorent в паркинге" data-i-alt="al.bi" width="1600" height="1000" decoding="async" loading="lazy"></picture></figure>
-      <figure class="sl" data-car="santa-fe"><picture><source media="(max-width:760px)" srcset="assets/img/p-suv-m.webp?v=20260929-7"><img src="assets/img/p-suv.webp?v=20260929-7" alt="Серый Hyundai Santa Fe Carline Autorent, вид сзади" data-i-alt="al.su" width="1600" height="1000" decoding="async" loading="lazy"></picture></figure>
-      <figure class="sl" data-car="cobalt"><picture><source media="(max-width:760px)" srcset="assets/img/p-ekonom-m.webp?v=20260929-9"><img src="assets/img/p-ekonom.webp?v=20260929-9" alt="Белый Chevrolet Cobalt 2026 Carline Autorent в паркинге" data-i-alt="al.ek" width="1600" height="1000" decoding="async" loading="lazy"></picture></figure>
+    <div class="ph stage" aria-hidden="true">
+      <div class="st-car"><model-viewer id="mv" src="assets/3d/camry80.glb?v=20261007-1" poster="assets/3d/camry80-poster.webp?v=20261007-1" camera-orbit="-35deg 80deg 84%" field-of-view="26deg" exposure="1.05" shadow-intensity="1.1" shadow-softness="0.8" environment-image="neutral" interaction-prompt="none" disable-zoom disable-pan auto-rotate auto-rotate-delay="0" rotation-per-second="-14deg" loading="eager" reveal="auto"></model-viewer></div>
     </div>
     <div class="hero-in">
       <div class="txt hero-txt">
@@ -156,14 +151,7 @@
         </ul>
       </div>
       <div class="reel-ui">
-        <div class="rcs" aria-live="polite">
-        <a class="rc is-on" href="#camry-70-luxe" data-go="camry-70-luxe"><b data-i="car.camry70l">Toyota Camry 70 Luxe</b><span><i>30 000</i> <span class="cur" data-i="w.cur"></span><span data-i="w.tg">тг</span></span><svg width="18" height="18" aria-hidden="true"><use href="#ic-arr"/></svg></a>
-        <a class="rc" href="#elantra" data-go="elantra"><b data-i="car.elantra">Hyundai Elantra</b><span><i>20 000</i> <span class="cur" data-i="w.cur"></span><span data-i="w.tg">тг</span></span><svg width="18" height="18" aria-hidden="true"><use href="#ic-arr"/></svg></a>
-        <a class="rc" href="#camry-70-prestige" data-go="camry-70-prestige"><b data-i="car.camry70p">Toyota Camry 70 Prestige</b><span><i>25 000</i> <span class="cur" data-i="w.cur"></span><span data-i="w.tg">тг</span></span><svg width="18" height="18" aria-hidden="true"><use href="#ic-arr"/></svg></a>
-        <a class="rc" href="#santa-fe" data-go="santa-fe"><b data-i="car.santafe">Hyundai Santa Fe</b><span><i>50 000</i> <span class="cur" data-i="w.cur"></span><span data-i="w.tg">тг</span></span><svg width="18" height="18" aria-hidden="true"><use href="#ic-arr"/></svg></a>
-        <a class="rc" href="#cobalt" data-go="cobalt"><b data-i="car.cobalt">Chevrolet Cobalt</b><span><i>15 000</i> <span class="cur" data-i="w.cur"></span><span data-i="w.tg">тг</span></span><svg width="18" height="18" aria-hidden="true"><use href="#ic-arr"/></svg></a>
-        </div>
-        <div class="rbars" role="group" aria-label="Машины парка" data-i-aria="a.reel"><button type="button" aria-label="Toyota Camry 70 Luxe"><i></i></button><button type="button" aria-label="Hyundai Elantra"><i></i></button><button type="button" aria-label="Toyota Camry 70 Prestige"><i></i></button><button type="button" aria-label="Hyundai Santa Fe"><i></i></button><button type="button" aria-label="Chevrolet Cobalt"><i></i></button></div>
+        <a class="rc is-on" href="#camry-80" data-go="camry-80"><b data-i="car.camry80">Toyota Camry 80</b><span><i>40 000</i> <span class="cur" data-i="w.cur"></span><span data-i="w.tg">тг</span></span><svg width="18" height="18" aria-hidden="true"><use href="#ic-arr"/></svg></a>
       </div>
     </div>
   </section>
@@ -435,6 +423,7 @@
     <a class="logo" href="#top" data-go="top"><img class="logo-img" src="assets/brand/logo-h-light.png" alt="Carline Auto Rent" width="420" height="150" loading="lazy" decoding="async"></a>
     <p class="foot-d"><span data-i="ft.d">Аренда авто без водителя в Астане.</span> ИП Арынгазиева</p>
     <a class="foot-ig" href="https://www.instagram.com/carline.autorent/" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-ig"/></svg><span>@carline.autorent</span></a>
+    <p class="foot-cr">3D: <a href="https://sketchfab.com/3d-models/toyota-camry-v80-98c70e5aa53446728fea4d8f448bbf33" target="_blank" rel="noopener">«toyota camry v80»</a> by <a href="https://sketchfab.com/s122" target="_blank" rel="noopener">s122</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
   </div>
 </footer>
 
@@ -454,6 +443,6 @@
   <a class="bar-ig" href="https://www.instagram.com/carline.autorent/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20"><use href="#ic-ig"/></svg></a>
 </div>
 
-<script src="script.js?v=20261007-2" defer></script>
+<script src="script.js?v=20261007-3" defer></script>
 </body>
 </html>
