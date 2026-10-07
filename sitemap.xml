@@ -2,11 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://songokura.github.io/carline-autorent/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://songokura.github.io/carline-autorent/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://songokura.github.io/carline-autorent/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://songokura.github.io/carline-autorent/"/>
+  </url>
+  <url>
+    <loc>https://songokura.github.io/carline-autorent/subarenda.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://songokura.github.io/carline-autorent/subarenda.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://songokura.github.io/carline-autorent/subarenda.html?lang=en"/>
   </url>
 </urlset>

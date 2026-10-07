@@ -26,7 +26,7 @@ function conv(key, item){
 /* ---------------- АНГЛИЙСКИЙ СЛОВАРЬ ---------------- */
 var EN = {
   "m.title":"Car Rental in Astana without a Driver from 15,000 KZT per Day - Carline Autorent",
-  "m.desc":"Self-drive car rental in Astana: 8 sedans and a crossover from 15,000 KZT per day. Minimal deposit, clean and serviced cars, delivery across the city, WhatsApp reply within 5 minutes. Open daily 10:00-22:00.",
+  "m.desc":"Self-drive car rental in Astana: 8 sedans and a crossover from 15,000 KZT per day. Minimal deposit, clean and serviced cars, delivery across the city, WhatsApp reply within 5 minutes. Open 24/7.",
   "m.ogt":"Carline Autorent - self-drive car rental in Astana",
   "a.menu":"Menu","a.home":"Carline Autorent - home","a.nav":"Sections","a.lang":"Site language","a.call":"Call","a.mnav":"Mobile menu",
   "a.hero":"Self-drive car rental in Astana","a.reel":"Cars in the fleet","a.ek":"Economy class","a.ko":"Comfort class","a.bi":"Business class","a.su":"SUV","a.park":"Fleet and prices","a.filter":"Filter by class","a.dost":"Car delivery across the city","a.usl":"Rental terms","a.kak":"How to rent","a.faq":"FAQ","a.zay":"Booking request","a.kont":"Contacts","a.bar":"Quick contact",
@@ -34,7 +34,7 @@ var EN = {
   "mn.ek":"Economy","mn.ko":"Comfort","mn.bi":"Business","mn.su":"SUV",
   "b.wa":"Message on WhatsApp","b.call":"Call","b.book":"Book now","b.cars":"Cars in this class","b.bookwa":"Book on WhatsApp",
   "w.from":"from","w.day":"KZT / day","w.cur":"","w.curf":"",
-  "h.kw":"Self-drive car rental in Astana",
+  "h.kw":"Car rental in Astana",
   "h.l1":"Like your own.","h.l2":"Minus the hassle.",
   "h.lead":"8 cars from 15,000 KZT per day. Minimal deposit, delivery across the city, WhatsApp reply within 5 minutes.",
   "h.b1":"Book on WhatsApp","h.b2":"Choose a car","h.ig":"Our fleet on Instagram",
@@ -42,20 +42,20 @@ var EN = {
   "c2.k":"Comfort","c2.h":"Hyundai Elantra and Toyota Camry 55","c2.l":"Comfortable sedans for every day, meetings and family trips.",
   "c3.k":"Business","c3.h":"Toyota Camry 70, Kia K5 and Camry 80","c3.l":"Executive sedans for business trips, meetings and events.",
   "c4.k":"SUV","c4.h":"Hyundai Santa Fe","c4.l":"A spacious crossover for the family, city guests and trips out of town.",
-  "p.k":"Fleet","p.h":"Choose your car","p.l":"8 cars. The longer the rental, the lower the daily price - up to -30% from 16 days. Tap \"Book\" - WhatsApp opens with the name of the chosen car.",
+  "p.k":"Fleet","p.h":"Choose your car","p.l":"Pick the rental period above the price - the price updates. Tap \"Book\" - WhatsApp opens with the car and the period.",
   "f.all":"All","f.ek":"Economy","f.ko":"Comfort","f.bi":"Business","f.su":"SUV",
   "ph.t":"Car photo",
   "car.cobalt":"Chevrolet Cobalt","car.elantra":"Hyundai Elantra","car.camry55":"Toyota Camry 55","car.camry70p":"Toyota Camry 70 Prestige","car.camry70l":"Toyota Camry 70 Luxe","car.k5":"Kia K5","car.camry80":"Toyota Camry 80","car.santafe":"Hyundai Santa Fe",
   "s.cobalt":"2026 · sedan · 5 seats","s.elantra":"2024 · Luxe (full) · 1.5 L","s.camry55":"N4 · sedan · 5 seats","s.camry70p":"Prestige · sedan · 5 seats","s.camry70l":"Luxe · sedan · 5 seats","s.k5":"2022 · Full · sedan · 5 seats","s.camry80":"Prestige · sedan · 5 seats","s.santafe":"Full · crossover · all-wheel drive",
-  "p.note":"Prices in tenge per day: large - for 1 day, below - for 2-4, 5-15 and 16-30 days. Delivery across the city - 5,000 KZT, to the airport - 10,000 KZT. Deposit and extension terms - ask the manager on WhatsApp.",
-  "n1":"cars in the fleet","n2":"off the daily price when renting from 16 days","t.2":"2-4 days","t.5":"5-15 days","t.16":"16-30 days","n3m":"min","n3":"WhatsApp reply time","n4":"daily, no days off",
+  "p.note":"Prices in tenge, depending on the rental period. Deposit and extension terms - ask the manager on WhatsApp.",
+  "n1":"cars in the fleet","n2":"when renting from 16 days","t.2":"2-4 days","t.5":"5-15 days","t.16":"16-30 days","n3m":"min","n3":"WhatsApp reply time","n4":"no days off",
   "d.k":"Delivery","d.h":"We bring the car to your address","d.l":"Send us the address and a convenient time - we arrive with the car, sign the contract on the spot and hand over the keys.",
   "d.b":"Order delivery","dp.city":"Across the city","dp.air":"To the airport","dp.u":"KZT","dp.u2":"KZT","d.b2":"Rental terms",
   "u.k":"Terms","u.h":"What you need to rent","u.l":"The essentials in short. Exact amounts and requirements for your car - from the manager on WhatsApp.",
   "u1.h":"Documents","u1.t":"ID and a driving licence. Full list - from the manager.",
   "u2.h":"Deposit","u2.t":"Among the lowest on the market. Depends on the car - confirmed at booking.",
   "u3.h":"Age and experience","u3.t":"Age and driving experience requirements - ask the manager.",
-  "u4.h":"Rental period","u4.t":"From one day. Extension by WhatsApp message, no office visit.",
+  "u4.h":"Rental period","u4.t":"From one day. Extensions are arranged at the office - let the manager know in advance.",
   "w.k":"Why Carline","w1":"Minimal deposit","w2":"Clean and serviced cars","w3":"Delivery across the city","w4":"WhatsApp reply within 5 minutes",
   "k.k":"How to rent","k.h":"Four steps to the keys",
   "k1.h":"Choose a car","k1.t":"In the catalogue above or with the manager's advice",
@@ -66,20 +66,22 @@ var EN = {
   "q1.q":"What is the deposit and when is it returned?","q1.a":"The deposit is minimal and depends on the car. It is returned after the car is checked in. The manager will name the exact amount.",
   "q2.q":"Which documents do I need?","q2.a":"ID and a driving licence. If there are special requirements for your car, we will tell you at booking.",
   "q3.q":"Do you deliver the car?","q3.a":"Yes. Across Astana - 5,000 KZT, to the airport - 10,000 KZT. You send the address and time, we arrive, sign the contract on the spot and hand over the car.",
-  "q4.q":"Can I extend the rental?","q4.a":"Yes, message us on WhatsApp before the end of the term - we extend without an office visit if the car is free.",
-  "q5.q":"In what condition are the cars?","q5.a":"Clean inside and out, fully serviced. You return it the same way - no surprises on either side.",
+  "q4.q":"Can I extend the rental?","q4.a":"Yes, if the car is free. Let the manager know on WhatsApp before the term ends and come to the office - the extension is arranged on the spot.",
+  "q5.q":"In what condition are the cars?","q5.a":"Clean inside and out, fully serviced. Please return the car in the same condition.",
   "z.k":"Booking","z.h":"Book a car","z.l":"Fill in three fields - the request opens in your WhatsApp, the manager replies within 5 minutes.",
   "f.car":"Car","f.any":"Pick one for me","f.from":"Pickup date","f.to":"Return date","f.name":"Name","f.nameph":"How should we address you","f.phone":"Phone","f.send":"Send on WhatsApp",
   "f.err":"Enter your phone so we can reply.","f.ok":"Thank you! Opening WhatsApp with your request - if the window did not appear, message us directly.",
   "f.note":"The request goes to the manager on WhatsApp. No robot calls or mailings.",
-  "kt.k":"Contacts","kt.h":"Message or call us","kt.l":"We reply daily from 10:00 to 22:00. Office - Rakymzhan Koshkarbayev Avenue, 10/1, Astana.",
-  "kt.hrs":"Daily 10:00-22:00","kt.2gis":"We are on 2GIS","kt.addr":"Rakymzhan Koshkarbayev Ave., 10/1, Astana","kt.map":"Map: Carline Autorent, Koshkarbayev 10/1","kt.route":"Route on 2GIS",
+  "kt.k":"Contacts","kt.h":"Message or call us","kt.l":"We work 24/7, no days off. Office - Rakymzhan Koshkarbayev Avenue, 10/1, Astana.",
+  "kt.hrs":"24/7, no days off","kt.2gis":"We are on 2GIS","kt.addr":"Rakymzhan Koshkarbayev Ave., 10/1, Astana","kt.map":"Map: Carline Autorent, Koshkarbayev 10/1","kt.route":"Route on 2GIS",
   "ft.d":"Self-drive car rental in Astana.",
-  "al.hero":"Black Toyota Camry 70 by Carline Autorent with headlights on at night","al.ek":"White Chevrolet Cobalt 2026 by Carline Autorent in a parking garage","al.ko":"White Hyundai Elantra 2024 by Carline Autorent in the city","al.bi":"Black Toyota Camry 70 Prestige by Carline Autorent in a parking garage","al.su":"Grey Hyundai Santa Fe by Carline Autorent, rear view","al.dost":"Black Toyota Camry 70 by Carline Autorent in the evening",
+  "al.hero":"Black Toyota Camry 70 by Carline Autorent with headlights on at night","al.ek":"White Chevrolet Cobalt 2026 by Carline Autorent in a parking garage","al.ko":"White Hyundai Elantra 2024 by Carline Autorent in the city","al.bi":"Black Toyota Camry 70 Prestige by Carline Autorent in a parking garage","al.su":"Grey Hyundai Santa Fe by Carline Autorent, rear view","al.dost":"Airport terminal at night - car delivery to your flight",
   "al.elantra":"White Hyundai Elantra 2024 by Carline Autorent","al.camry55":"Black Toyota Camry 55 by Carline Autorent with headlights on","al.camry70p":"Black Toyota Camry 70 Prestige by Carline Autorent in a parking garage","al.camry70l":"Black Toyota Camry 70 Luxe by Carline Autorent by a building in the evening","al.camry80":"Black Toyota Camry 80 by Carline Autorent","al.cobalt":"White Chevrolet Cobalt 2026 by Carline Autorent","g.btn":"All photos","g.hint":"Click to open the gallery","g.soon":"Photo coming soon","g.s1":"Interior: front row","g.s2":"Interior: rear row","g.s3":"Trunk","g.aria":"Car photos","g.close":"Close","g.prev":"Previous photo","g.next":"Next photo","al.k5":"Grey Kia K5 in a parking garage","al.santafe":"Grey Hyundai Santa Fe by Carline Autorent, front view",
+  "h.tg":"Message on Telegram","p.sl":"The longer the rental, the better the price","t.1":"1 day","w.tg":"KZT","a.term":"Rental period","a.sub":"Car sublease","n.sub":"Sublease","sb.k":"For car owners","sb.h":"Sublease your car to us","sb.l":"Your car works and earns, while we take care of clients, contracts and handovers.","sb1":"We find renters and hand over the car","sb2":"An official contract with the owner","sb3":"We keep an eye on the car's condition","sb.more":"Learn more","sb.wa":"Offer a car",
   "mq.list":"Chevrolet Cobalt|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|from 15,000 KZT per day|Delivery from 5,000 KZT"
 };
 var RU_MQ = "Chevrolet Cobalt|Hyundai Elantra|Toyota Camry 55|Toyota Camry 70|Kia K5|Toyota Camry 80|Hyundai Santa Fe|от 15 000 тг в сутки|Доставка от 5 000 тг";
+if (window.PAGE_EN) Object.assign(EN, window.PAGE_EN);    /* английский текст отдельной страницы */
 var I18N = {en: EN};
 var RU = {};                                       /* снимок русского текста из разметки */
 
@@ -87,18 +89,19 @@ var RU = {};                                       /* снимок русско�
    data-wa="general|class|car|delivery"; class и car берут название из data-wa-title (ключ i18n).
    Обработчик в фазе захвата на window - раньше трекера LeadBot, чтобы он дописал код к готовой ссылке. */
 var WA_T = {
-  ru:{general:"Здравствуйте! Пишу с сайта Carline Autorent. Хочу арендовать автомобиль.", "class":"Здравствуйте! Пишу с сайта Carline Autorent. Интересует класс:\n{name}\nПодскажите, какие машины свободны и условия.", car:"Здравствуйте! Пишу с сайта Carline Autorent. Хочу забронировать:\n{name}\nДаты аренды: ", delivery:"Здравствуйте! Пишу с сайта Carline Autorent. Хочу арендовать машину с доставкой.\nМашина:\nАдрес:\nДата и время:"},
-  en:{general:"Hello! I'm writing from the Carline Autorent website. I'd like to rent a car.", "class":"Hello! I'm writing from the Carline Autorent website. I'm interested in the class:\n{name}\nWhich cars are available and on what terms?", car:"Hello! I'm writing from the Carline Autorent website. I'd like to book:\n{name}\nRental dates: ", delivery:"Hello! I'm writing from the Carline Autorent website. I'd like to rent a car with delivery.\nCar:\nAddress:\nDate and time:"}
+  ru:{general:"Здравствуйте! Пишу с сайта Carline Autorent. Хочу арендовать автомобиль.", "class":"Здравствуйте! Пишу с сайта Carline Autorent. Интересует класс:\n{name}\nПодскажите, какие машины свободны и условия.", car:"Здравствуйте! Пишу с сайта Carline Autorent. Хочу забронировать:\n{name}\nДаты аренды: ", delivery:"Здравствуйте! Пишу с сайта Carline Autorent. Хочу арендовать машину с доставкой.\nМашина:\nАдрес:\nДата и время:", sub:"Здравствуйте! Пишу с сайта Carline Autorent. Хочу сдать машину в субаренду.\nМарка, модель, год:\nПробег:", term:"Срок: "},
+  en:{general:"Hello! I'm writing from the Carline Autorent website. I'd like to rent a car.", "class":"Hello! I'm writing from the Carline Autorent website. I'm interested in the class:\n{name}\nWhich cars are available and on what terms?", car:"Hello! I'm writing from the Carline Autorent website. I'd like to book:\n{name}\nRental dates: ", delivery:"Hello! I'm writing from the Carline Autorent website. I'd like to rent a car with delivery.\nCar:\nAddress:\nDate and time:", sub:"Hello! I'm writing from the Carline Autorent website. I'd like to sublease my car to you.\nMake, model, year:\nMileage:", term:"Period: "}
 };
 function tr(key){
   var L = curLang(), d = I18N[L];
   return (d && d[key]) || RU[key] || "";
 }
-function waText(kind, titleKey){
+function waText(kind, titleKey, termKey){
   var L = curLang(), T = WA_T[L] || WA_T.ru;
   if (L === "kk" && window.SITE_KK && window.SITE_KK.__wa) T = window.SITE_KK.__wa;
   var t = T[kind] || T.general;
   if (titleKey) t = t.replace("{name}", tr(titleKey));
+  if (kind === "car" && termKey) t = t.replace(/\n([^\n]*)$/, "\n" + (T.term || "Срок: ") + tr(termKey) + "\n$1");
   return t;
 }
 window.addEventListener("click", function(e){
@@ -106,7 +109,8 @@ window.addEventListener("click", function(e){
   if (!a) return;
   var h = a.getAttribute("href") || "";
   if (a.dataset.wa) {
-    a.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(waText(a.dataset.wa, a.dataset.waTitle));
+    var cd = a.closest(".card");
+    a.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(waText(a.dataset.wa, a.dataset.waTitle, cd && cd.dataset.term));
     conv("contact", a.dataset.waTitle || a.dataset.wa);
   } else if (h.indexOf("tel:") === 0) conv("phone");
 }, true);
@@ -141,13 +145,23 @@ function applyLang(lang){
   fitAll();
 }
 /* казахский словарь - отдельным файлом, только по выбору человека */
+function addScript(src, cb){
+  var s = document.createElement("script");
+  s.src = src + (ASSET_V ? "?v=" + ASSET_V : "");
+  s.onload = s.onerror = function(){ cb(); };
+  document.head.appendChild(s);
+}
+/* у отдельной страницы свой словарь: <body data-kk="subarenda"> -> assets/lang/subarenda-kk.js (window.PAGE_KK) */
 function loadLang(lang, done){
   if (I18N[lang] || lang !== "kk") return done();
-  var s = document.createElement("script");
-  s.src = "assets/lang/kk.js" + (ASSET_V ? "?v=" + ASSET_V : "");
-  s.onload = function(){ if (window.SITE_KK) I18N.kk = window.SITE_KK; done(); };
-  s.onerror = function(){ done(); };
-  document.head.appendChild(s);
+  addScript("assets/lang/kk.js", function(){
+    var page = document.body.dataset.kk;
+    function fin(){
+      if (window.SITE_KK) I18N.kk = Object.assign({}, window.SITE_KK, window.PAGE_KK || {});
+      done();
+    }
+    page ? addScript("assets/lang/" + page + "-kk.js", fin) : fin();
+  });
 }
 function setLang(lang){
   if (["ru","kk","en"].indexOf(lang) < 0) lang = "ru";
@@ -400,6 +414,7 @@ fitAll();
 if (location.hash) {
   var hid = location.hash.slice(1);
   if (/^(ekonom|komfort|biznes|vnedorozhnik)$/.test(hid)) hid = "avtopark";   /* старые якоря классов, убраны 02.10.2026 */
+  if (hid === "kak-arendovat") hid = "subarenda";                             /* блок шагов заменён субарендой 07.10.2026 */
   if (document.getElementById(hid)) {
     setTimeout(function(){ goTo(hid, false); }, 60);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ if (location.hash.slice(1) === hid) goTo(hid, false); });
@@ -419,7 +434,7 @@ var GAL = {
   camry80:  {t:"car.camry80",  s:[1,2,3,4,5,6,7,8].map(function(n){ return "assets/img/g/camry80-" + n + ".webp" + GV; })},
   santafe:  {t:"car.santafe",  s:[1,2,3,4,5,6,7,8].map(function(n){ return "assets/img/g/santafe-" + n + ".webp" + GV; })}
 };
-RU["g.hint"] = "Нажмите - откроется галерея"; RU["g.s1"] = "Салон: передний ряд"; RU["g.s2"] = "Салон: задний ряд"; RU["g.s3"] = "Багажник";
+RU["g.s1"] = "Салон: передний ряд"; RU["g.s2"] = "Салон: задний ряд"; RU["g.s3"] = "Багажник";
 var lb = document.getElementById("lb");
 if (lb) {
   var lbImg = lb.querySelector(".lb-img"), lbPh = lb.querySelector(".lb-ph"), lbPhT = lb.querySelector(".lb-ph-t"),
@@ -451,8 +466,6 @@ if (lb) {
   document.addEventListener("click", function(e){
     var b = e.target.closest && e.target.closest(".gal-btn");
     if (b) { e.preventDefault(); open(b.dataset.gal, b, +(b.dataset.at || 0)); return; }
-    var ci = e.target.closest && e.target.closest(".has-gal .cimg");
-    if (ci) { var gb = ci.querySelector(".gal-btn"); open(gb.dataset.gal, gb, +(gb.dataset.at || 0)); }
   });
   lbPrev.addEventListener("click", function(){ show(idx - 1); });
   lbNext.addEventListener("click", function(){ show(idx + 1); });
@@ -472,46 +485,76 @@ if (lb) {
   }, {passive:true});
 }
 
-/* ---------------- СЛАЙД-ШОУ В КАРТОЧКЕ ----------------
-   Наведение (на телефоне - карточка в кадре) листает фото машины прямо в карточке:
-   полоски сверху, клик открывает галерею на текущем кадре. Лёгкие копии - assets/img/g/s/. */
-var HOVER = matchMedia("(hover:hover) and (pointer:fine)").matches;
-var STEP = 1600;
+/* ---------------- АЛЬБОМ В КАРТОЧКЕ ----------------
+   До 5 фото прямо в карточке: обложка + 4 кадра галереи (ALB - номера кадров в GAL[...].s).
+   Стрелки и точки, свайп на телефоне, стрелки клавиатуры на фокусе. Клик по фото -
+   галерея на этом кадре. Лёгкие копии - assets/img/g/s/. */
+var ALB = {cobalt:[2,3,5,6], elantra:[2,3,5,6], camry55:[4,5,6,7], camry70p:[2,3,5,7], camry70l:[3,5,6,8], camry80:[3,5,6,8], santafe:[3,6,7,8]};
 document.querySelectorAll(".gal-btn").forEach(function(b){
-  var g = GAL[b.dataset.gal]; if (!g) return;
-  var card = b.closest(".card"), ci = b.parentNode;
+  var key = b.dataset.gal, g = GAL[key], picks = ALB[key]; if (!g || !picks) return;
+  var card = b.closest(".card"), ci = b.parentNode, cover = ci.querySelector("img");
   card.classList.add("has-gal");
-  var src = g.s.filter(function(x){ return typeof x === "string"; });
-  var cs = document.createElement("div"); cs.className = "cs"; cs.setAttribute("aria-hidden", "true");
-  var bars = document.createElement("div"); bars.className = "cbars"; bars.setAttribute("aria-hidden", "true");
-  src.forEach(function(){ bars.appendChild(document.createElement("i")); });
-  var hint = document.createElement("span"); hint.className = "chint"; hint.setAttribute("data-i", "g.hint"); hint.textContent = tr("g.hint") || "Нажмите - откроется галерея";
-  ci.appendChild(cs); ci.appendChild(bars); ci.appendChild(hint);
-  var imgs = [], i = 0, t = null, built = false;
+  var frames = [{src: null, at: 0}].concat(picks.map(function(n){
+    var k = g.s.findIndex(function(x){ return x.indexOf("-" + n + ".webp") > 0; });
+    return {src: g.s[k].replace("/g/", "/g/s/"), at: k};
+  }));
+  var alb = document.createElement("div"); alb.className = "alb";
+  var dots = document.createElement("div"); dots.className = "alb-dots"; dots.setAttribute("aria-hidden", "true");
+  var prev = document.createElement("button"), next = document.createElement("button");
+  prev.type = next.type = "button"; prev.className = "alb-nav alb-prev"; next.className = "alb-nav alb-next";
+  prev.setAttribute("data-i-aria", "g.prev"); next.setAttribute("data-i-aria", "g.next");
+  prev.setAttribute("aria-label", tr("g.prev") || "Предыдущее фото"); next.setAttribute("aria-label", tr("g.next") || "Следующее фото");
+  prev.innerHTML = next.innerHTML = '<svg width="18" height="18" aria-hidden="true"><use href="#ic-arr"/></svg>';
+  frames.forEach(function(){ dots.appendChild(document.createElement("i")); });
+  ci.appendChild(alb); ci.appendChild(dots); ci.appendChild(prev); ci.appendChild(next);
+  var imgs = [], i = 0, built = false;
   function build(){
     if (built) return; built = true;
-    src.forEach(function(p){ var im = new Image(); im.alt = ""; im.decoding = "async"; im.src = p.replace("/g/", "/g/s/"); cs.appendChild(im); imgs.push(im); });
-  }
-  function paint(){
-    imgs.forEach(function(im, k){ im.classList.toggle("on", k === i); });
-    [].forEach.call(bars.children, function(el, k){
-      el.classList.remove("run"); el.classList.toggle("done", k < i);
+    frames.forEach(function(f, k){
+      if (!k) { imgs.push(null); return; }
+      var im = new Image(); im.alt = ""; im.decoding = "async"; im.src = f.src; alb.appendChild(im); imgs.push(im);
     });
-    var cur = bars.children[i]; void cur.offsetWidth; cur.style.setProperty("--dur", STEP + "ms"); cur.classList.add("run");
-    b.dataset.at = i;
   }
-  function tick(){ i = (i + 1) % src.length; paint(); }
-  function start(){
-    if (RED || t) return; build(); card.classList.add("play");
-    i = src.length > 1 ? 1 : 0; paint(); t = setInterval(tick, STEP);
+  function go(n){
+    if (n !== 0) build();
+    i = Math.max(0, Math.min(frames.length - 1, n));
+    imgs.forEach(function(im, k){ if (im) im.classList.toggle("on", k === i); });
+    [].forEach.call(dots.children, function(d, k){ d.classList.toggle("on", k === i); });
+    prev.disabled = i === 0; next.disabled = i === frames.length - 1;
+    b.dataset.at = frames[i].at;
   }
-  function stop(){
-    clearInterval(t); t = null; card.classList.remove("play");
-    imgs.forEach(function(im){ im.classList.remove("on"); }); b.dataset.at = 0;
-  }
-  if (HOVER) { ci.addEventListener("mouseenter", start); ci.addEventListener("mouseleave", stop); }
-  else if ("IntersectionObserver" in window) {
-    new IntersectionObserver(function(es){ es.forEach(function(e){ e.isIntersecting ? start() : stop(); }); }, {threshold: .7}).observe(ci);
-  }
+  prev.addEventListener("click", function(e){ e.stopPropagation(); go(i - 1); });
+  next.addEventListener("click", function(e){ e.stopPropagation(); go(i + 1); });
+  ci.addEventListener("mouseenter", build, {once: true});
+  var tx = null;
+  ci.addEventListener("touchstart", function(e){ tx = e.touches[0].clientX; build(); }, {passive: true});
+  ci.addEventListener("touchend", function(e){
+    if (tx == null) return; var dx = e.changedTouches[0].clientX - tx; tx = null;
+    if (Math.abs(dx) > 40) { go(i + (dx < 0 ? 1 : -1)); ci.dataset.swiped = "1"; setTimeout(function(){ delete ci.dataset.swiped; }, 350); }
+  }, {passive: true});
+  ci.addEventListener("click", function(e){
+    if (ci.dataset.swiped || e.target.closest(".alb-nav,.gal-btn")) return;
+    b.click();
+  });
+  go(0);
+});
+
+/* ---------------- СРОК АРЕНДЫ НАД ЦЕНОЙ ----------------
+   Переключатель 1 сутки / 2-4 / 5-15 / 16-30 дней пересчитывает цену карточки (data-p: 4 цены
+   через запятую). Выбранный срок уходит в текст WhatsApp кнопки «Забронировать». */
+function fmtPrice(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " "); }
+document.querySelectorAll(".card .term").forEach(function(box){
+  var card = box.closest(".card"), pr = card.querySelector(".cprice"), b = pr.querySelector("b");
+  var P = pr.dataset.p.split(",");
+  card.dataset.term = "t.1";
+  [].forEach.call(box.children, function(btn, k){
+    btn.addEventListener("click", function(){
+      [].forEach.call(box.children, function(x, j){ x.classList.toggle("is-on", j === k); x.setAttribute("aria-pressed", j === k ? "true" : "false"); });
+      card.dataset.term = btn.dataset.i;
+      if (RED) { b.textContent = fmtPrice(P[k]); return; }
+      pr.classList.add("flip");
+      setTimeout(function(){ b.textContent = fmtPrice(P[k]); pr.classList.remove("flip"); }, 160);
+    });
+  });
 });
 })();
