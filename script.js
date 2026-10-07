@@ -26,7 +26,7 @@ function conv(key, item){
 /* ---------------- АНГЛИЙСКИЙ СЛОВАРЬ ---------------- */
 var EN = {
   "m.title":"Car Rental in Astana without a Driver from 15,000 KZT per Day - Carline Autorent",
-  "m.desc":"Self-drive car rental in Astana: 8 sedans and a crossover from 15,000 KZT per day. Minimal deposit, clean and serviced cars, delivery across the city, WhatsApp reply within 5 minutes. Open 24/7.",
+  "m.desc":"Self-drive car rental in Astana: sedans and a crossover from 15,000 KZT per day. Minimal deposit, clean and serviced cars, delivery across the city, WhatsApp reply within 5 minutes. Open 24/7.",
   "m.ogt":"Carline Autorent - self-drive car rental in Astana",
   "a.menu":"Menu","a.home":"Carline Autorent - home","a.nav":"Sections","a.lang":"Site language","a.call":"Call","a.mnav":"Mobile menu",
   "a.hero":"Self-drive car rental in Astana","a.reel":"Cars in the fleet","a.ek":"Economy class","a.ko":"Comfort class","a.bi":"Business class","a.su":"SUV","a.park":"Fleet and prices","a.filter":"Filter by class","a.dost":"Car delivery across the city","a.usl":"Rental terms","a.kak":"How to rent","a.faq":"FAQ","a.zay":"Booking request","a.kont":"Contacts","a.bar":"Quick contact",
@@ -36,7 +36,7 @@ var EN = {
   "w.from":"from","w.day":"KZT / day","w.cur":"","w.curf":"",
   "h.kw":"Car rental in Astana",
   "h.l1":"Like your own.","h.l2":"Minus the hassle.",
-  "h.lead":"8 cars from 15,000 KZT per day. Minimal deposit, delivery across the city, WhatsApp reply within 5 minutes.",
+  "h.lead":"Cars for rent from 15,000 KZT per day. Minimal deposit, delivery across the city, WhatsApp reply within 5 minutes.",
   "h.b1":"Book on WhatsApp","h.b2":"Choose a car","h.ig":"Our fleet on Instagram",
   "c1.k":"Economy","c1.h":"Chevrolet Cobalt 2026","c1.l":"For the city and errands: affordable, economical, always clean.",
   "c2.k":"Comfort","c2.h":"Hyundai Elantra and Toyota Camry 55","c2.l":"Comfortable sedans for every day, meetings and family trips.",
@@ -48,7 +48,7 @@ var EN = {
   "car.cobalt":"Chevrolet Cobalt","car.elantra":"Hyundai Elantra","car.camry55":"Toyota Camry 55","car.camry70p":"Toyota Camry 70 Prestige","car.camry70l":"Toyota Camry 70 Luxe","car.k5":"Kia K5","car.camry80":"Toyota Camry 80","car.santafe":"Hyundai Santa Fe",
   "s.cobalt":"2026 · sedan · 5 seats","s.elantra":"2024 · Luxe (full) · 1.5 L","s.camry55":"N4 · sedan · 5 seats","s.camry70p":"Prestige · sedan · 5 seats","s.camry70l":"Luxe · sedan · 5 seats","s.k5":"2022 · Full · sedan · 5 seats","s.camry80":"Prestige · sedan · 5 seats","s.santafe":"Full · crossover · all-wheel drive",
   "p.note":"Prices in tenge, depending on the rental period. Deposit and extension terms - ask the manager on WhatsApp.",
-  "n1":"cars in the fleet","n2":"when renting from 16 days","t.2":"2-4 days","t.5":"5-15 days","t.16":"16-30 days","n3m":"min","n3":"WhatsApp reply time","n4":"no days off",
+  "n2":"when renting from 16 days","t.2":"2-4 days","t.5":"5-15 days","t.16":"16-30 days","n3m":"min","n3":"WhatsApp reply time","n4":"no days off",
   "d.k":"Delivery","d.h":"We bring the car to your address","d.l":"Send us the address and a convenient time - we arrive with the car, sign the contract on the spot and hand over the keys.",
   "d.b":"Order delivery","dp.city":"Across the city","dp.air":"To the airport","dp.u":"KZT","dp.u2":"KZT","d.b2":"Rental terms",
   "u.k":"Terms","u.h":"What you need to rent","u.l":"The essentials in short. Exact amounts and requirements for your car - from the manager on WhatsApp.",
