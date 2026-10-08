@@ -199,17 +199,6 @@ burger.addEventListener("click", function(){
 });
 document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeMenu(); });
 
-/* ---------------- ГЕРОЙ: БЕЛАЯ CAMRY 80 В СТУДИИ ----------------
-   Сцена three.js - assets/js/hero3d.js (лак, софтбоксы, мокрый пол). Подключаем после
-   загрузки страницы: первым экраном стоит постер - кадр той же сцены. Нет WebGL - остаётся постер. */
-(function(){
-  if (!document.getElementById("stage3d")) return;
-  function ok(){ try { var c = document.createElement("canvas"); return !!(c.getContext("webgl2") || c.getContext("webgl")); } catch(e){ return false; } }
-  function boot(){ if (ok()) import("./assets/js/hero3d.js" + (ASSET_V ? "?v=" + ASSET_V : "")).catch(function(){}); }
-  if (document.readyState === "complete") setTimeout(boot, 150);
-  else addEventListener("load", function(){ setTimeout(boot, 150); });
-})();
-
 /* ---------------- ЯКОРЯ ---------------- */
 function goTo(id, push){
   var el = document.getElementById(id); if (!el) return;

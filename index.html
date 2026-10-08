@@ -30,10 +30,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@500;600;700&family=Mulish:wght@400;500;600;700;800&display=swap">
-<link rel="preload" as="image" href="assets/3d/hero.webp?v=20261007-4" media="(min-width:761px)">
-<link rel="preload" as="image" href="assets/3d/hero-m.webp?v=20261007-4" media="(max-width:760px)">
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
-<link rel="stylesheet" href="styles.css?v=20261007-8">
+<link rel="preload" as="image" href="assets/img/hero-fleet.webp?v=20261008-1" imagesrcset="assets/img/hero-fleet.webp?v=20261008-1 1920w, assets/img/hero-fleet-2x.webp?v=20261008-1 2880w" imagesizes="100vw" media="(min-width:761px)">
+<link rel="preload" as="image" href="assets/img/hero-fleet-m.webp?v=20261008-1" media="(max-width:760px)">
+<link rel="stylesheet" href="styles.css?v=20261008-1">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -136,7 +135,7 @@
 <div class="pw pw-hero" id="top">
   <section class="plate hero" aria-label="Аренда авто без водителя в Астане" data-i-aria="a.hero">
     <div class="ph stage" aria-hidden="true">
-      <div class="st3d" id="stage3d" data-src="assets/3d/camry80.glb?v=20261007-1"><picture class="st-poster"><source media="(max-width:760px)" srcset="assets/3d/hero-m.webp?v=20261007-4"><img src="assets/3d/hero.webp?v=20261007-4" alt="" width="1440" height="900" fetchpriority="high" decoding="async"></picture></div>
+      <picture class="st-poster"><source media="(max-width:760px)" srcset="assets/img/hero-fleet-m.webp?v=20261008-1"><img src="assets/img/hero-fleet.webp?v=20261008-1" srcset="assets/img/hero-fleet.webp?v=20261008-1 1920w, assets/img/hero-fleet-2x.webp?v=20261008-1 2880w" sizes="100vw" alt="" width="1920" height="1200" fetchpriority="high" decoding="async"></picture>
     </div>
     <div class="hero-in">
       <div class="txt hero-txt">
@@ -159,7 +158,7 @@
 </div>
 
 <!-- ================= КАТАЛОГ АВТОПАРКА (обычная прокрутка) ================= -->
-<section class="sec sec-park t-red" id="avtopark" aria-label="Автопарк и цены" data-i-aria="a.park">
+<section class="sec sec-park t-wht" id="avtopark" aria-label="Автопарк и цены" data-i-aria="a.park">
   <div class="wrap">
     <div class="shead rv">
       <p class="kicker" data-i="p.k">Автопарк</p>
@@ -289,7 +288,7 @@
 </div>
 
 <!-- ================= УСЛОВИЯ ================= -->
-<section class="sec sec-usl t-red" id="usloviya" aria-label="Условия аренды" data-i-aria="a.usl">
+<section class="sec sec-usl t-wht" id="usloviya" aria-label="Условия аренды" data-i-aria="a.usl">
   <div class="wrap">
     <div class="shead rv">
       <p class="kicker" data-i="u.k">Условия</p>
@@ -335,7 +334,7 @@
 </section>
 
 <!-- ================= ВОПРОСЫ ================= -->
-<section class="sec sec-faq t-red" id="faq" aria-label="Частые вопросы" data-i-aria="a.faq">
+<section class="sec sec-faq t-wht" id="faq" aria-label="Частые вопросы" data-i-aria="a.faq">
   <div class="wrap">
     <div class="shead rv">
       <p class="kicker" data-i="q.k">Вопросы</p>
@@ -389,7 +388,7 @@
 </section>
 
 <!-- ================= КОНТАКТЫ ================= -->
-<section class="sec sec-kont t-red" id="kontakty" aria-label="Контакты" data-i-aria="a.kont">
+<section class="sec sec-kont t-wht" id="kontakty" aria-label="Контакты" data-i-aria="a.kont">
   <div class="wrap">
     <div class="shead rv">
       <p class="kicker" data-i="kt.k">Контакты</p>
@@ -425,7 +424,6 @@
     <a class="logo" href="#top" data-go="top"><img class="logo-img" src="assets/brand/logo-h-light.png" alt="Carline Auto Rent" width="420" height="150" loading="lazy" decoding="async"></a>
     <p class="foot-d"><span data-i="ft.d">Аренда авто без водителя в Астане.</span> ИП Арынгазиева</p>
     <a class="foot-ig" href="https://www.instagram.com/carline.autorent/" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-ig"/></svg><span>@carline.autorent</span></a>
-    <p class="foot-cr">3D: <a href="https://sketchfab.com/3d-models/toyota-camry-v80-98c70e5aa53446728fea4d8f448bbf33" target="_blank" rel="noopener">«toyota camry v80»</a> by <a href="https://sketchfab.com/s122" target="_blank" rel="noopener">s122</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
   </div>
 </footer>
 
@@ -439,6 +437,6 @@
   <a class="bar-ig" href="https://www.instagram.com/carline.autorent/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20"><use href="#ic-ig"/></svg></a>
 </div>
 
-<script src="script.js?v=20261007-8" defer></script>
+<script src="script.js?v=20261008-1" defer></script>
 </body>
 </html>

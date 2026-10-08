@@ -157,24 +157,9 @@ html[lang="kk"] .rc [data-i="w.day"]{order:-1}
 
 /* ---------- обычные секции ---------- */
 .sec{padding:96px 0;position:relative;scroll-margin-top:var(--hh)}
-/* чередование тем строго через одну: чёрный герой, красный, чёрный ... чёрный подвал (решение клиента 07.10.2026) */
+/* чередование тем строго через одну: чёрный герой, белый, чёрный ... чёрный подвал (07.10.2026; красный заменён белым 08.10.2026) - правила .t-wht в конце файла */
 .sec-usl{background:var(--coal);color:#fff}
-.t-red{background:var(--rbg);color:#fff}
 .t-blk{background:var(--ink);color:#fff}
-.t-red .lead{color:rgba(255,255,255,.88)}
-.t-red .kicker{color:rgba(255,255,255,.86)}
-.t-red .kicker::before,.t-red .kicker::after{background:rgba(255,255,255,.7)}
-.t-red .btn-solid{background:var(--ink);color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.28)}
-.t-red .btn-solid:hover{background:#000}
-.t-red .btn-solid svg{color:#fff}
-.t-red .btn-ghost{border-color:rgba(255,255,255,.45);color:#fff;background:transparent}
-.t-red .btn-ghost:hover{border-color:#fff}
-.t-red .tile{background:rgba(0,0,0,.16);border-color:rgba(255,255,255,.2)}
-.t-red .tile p{color:rgba(255,255,255,.86)}
-.t-red .tile svg,.t-red .why li svg,.t-red .faq summary svg,.t-red .sub-pts svg{color:#fff}
-.t-red .why li{background:rgba(0,0,0,.18)}
-.t-red .sp-steps i{-webkit-text-stroke-color:#fff}
-.t-red .sp-steps p{color:rgba(255,255,255,.86)}
 .t-blk .sub-pts li{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)}
 .t-blk .sub-pts svg{color:var(--red2)}
 .sec-form{background:var(--ink);color:#fff}
@@ -500,3 +485,33 @@ html[lang="kk"] .price [data-i="w.from"]{order:5}
 #dostavka .ph::after{background:linear-gradient(180deg,rgba(14,15,17,.86) 0%,rgba(14,15,17,.55) 45%,rgba(14,15,17,.08) 70%,rgba(14,15,17,.35) 100%)}
 #dostavka .car img{object-position:center bottom}
 @media (max-width:760px){ #dostavka .txt{padding-top:calc(var(--hh) + 3svh)} }
+
+/* ---------- 08.10.2026: белые секции вместо красных (.t-wht) ---------- */
+.t-wht{background:#fff;color:var(--ink)}
+.t-wht .lead,.t-wht .pnote,.t-wht .nums span,.t-wht .faq p,.t-wht .khrs,.t-wht .sp-cars > p:last-child{color:#3A3F45}
+.t-wht .kicker{color:var(--mute)}
+.t-wht .kicker::before,.t-wht .kicker::after{background:var(--red)}
+.t-wht .slogan,.t-wht .nums .n-main b,.t-wht .ktel{color:var(--ink)}
+.t-wht .nums .n-main b{color:var(--red)}
+.t-wht .nums div{border-top-color:rgba(14,15,17,.16)}
+.t-wht .btn-solid{background:var(--red);color:#fff;box-shadow:none}
+.t-wht .btn-solid:hover{background:var(--red2)}
+.t-wht .btn-ghost{border-color:rgba(14,15,17,.28);color:var(--ink);background:transparent}
+.t-wht .btn-ghost:hover{border-color:var(--ink)}
+.card .btn-ghost{border-color:rgba(255,255,255,.32);color:#fff}
+.t-wht .card{box-shadow:0 1px 2px rgba(14,15,17,.08),0 18px 34px -18px rgba(14,15,17,.45)}
+.t-wht.sec-park::before,.t-wht.sec-usl::after{background:repeating-linear-gradient(90deg,rgba(14,15,17,.14) 0 44px,transparent 44px 88px)}
+.t-wht.sec-usl::before{display:none}
+.t-wht .tile{background:var(--paper);border-color:rgba(14,15,17,.08)}
+.t-wht .tile:hover{background:var(--paper2);border-color:rgba(14,15,17,.16)}
+.t-wht .tile p,.t-wht .sp-steps p{color:#4A5057}
+.t-wht .tile svg,.t-wht .why li svg,.t-wht .faq summary svg,.t-wht .sub-pts svg,.t-wht .khrs svg,.t-wht .klist svg{color:var(--red)}
+.t-wht .why li{background:var(--paper)}
+.t-wht .faq,.t-wht .faq details{border-color:rgba(14,15,17,.14)}
+.t-wht .sub-pts li{background:var(--paper);border-color:rgba(14,15,17,.08)}
+.t-wht .sp-steps i{-webkit-text-stroke-color:var(--red)}
+.t-wht .sp-card{background:var(--paper)}
+.t-wht .sp-card p{color:#4A5057}
+.t-wht .kmap{box-shadow:0 0 0 1px rgba(14,15,17,.08)}
+.hero .st-poster img{object-position:right 62%}
+@media (max-width:760px){ .hero .st-poster img{object-position:center} }
