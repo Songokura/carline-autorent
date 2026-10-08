@@ -133,16 +133,6 @@ body.menu-open{overflow:hidden}
 .iglink:hover{color:#fff}
 .iglink i{font-style:normal;transition:transform .25s}
 .iglink:hover i{transform:translateX(4px)}
-.reel-ui{flex:0 0 330px;display:flex;flex-direction:column;gap:10px}
-.rc{position:relative;height:76px;display:grid;grid-template-columns:1fr auto;align-content:center;column-gap:14px;row-gap:5px;padding:0 20px;border:1px solid rgba(255,255,255,.2);border-radius:16px;background:rgba(14,15,17,.62);color:#fff;opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .7s cubic-bezier(.16,1,.3,1),border-color .25s;pointer-events:none}
-.rc.is-on{opacity:1;transform:none;pointer-events:auto}
-.rc:hover{border-color:rgba(255,255,255,.55)}
-.rc b{font:600 18px/1.15 var(--fd);letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.rc > span{display:flex;align-items:baseline;flex-wrap:wrap;gap:.4em;font:600 10.5px/1.2 var(--ft);letter-spacing:.16em;text-transform:uppercase;color:var(--silver);font-variant-numeric:lining-nums}
-html[lang="kk"] .rc [data-i="w.day"]{order:-1}
-.rc > span i{font:700 15px/1 var(--fd);font-style:normal;letter-spacing:.02em;color:#fff;font-variant-numeric:lining-nums}
-.rc svg{grid-column:2;grid-row:1/3;align-self:center;color:var(--red2);transition:transform .25s}
-.rc:hover svg{transform:translateX(3px)}
 
 /* плиты классов и доставки */
 .cls .txt{bottom:0;padding-bottom:clamp(44px,7svh,84px)}
@@ -331,9 +321,6 @@ html.no-plate .mq-t{animation:none}
   .hero .cta{margin-top:auto;padding-top:18px}
   .hero .cta .btn{margin:0;max-width:none}
   .iglink{align-self:center;margin-top:14px}
-  .reel-ui{flex:0 0 auto}
-  .rc{padding:0 16px;border-radius:14px}
-  .rc b{font-size:16px}
   .hero .ph::after{background:linear-gradient(180deg,rgba(14,15,17,.82) 0%,rgba(14,15,17,.45) 30%,rgba(14,15,17,.05) 44%,rgba(14,15,17,.15) 56%,rgba(14,15,17,.86) 74%,rgba(14,15,17,.96) 100%)}
 }
 @media (max-width:640px){
@@ -471,13 +458,11 @@ html[lang="kk"] .price [data-i="w.from"]{order:5}
 .stage::after{background:linear-gradient(90deg,rgba(10,11,12,.72),rgba(10,11,12,.2) 40%,rgba(10,11,12,0) 55%),linear-gradient(180deg,rgba(10,11,12,.55) 0%,transparent 20%)!important}
 .hero .hero-txt{flex:0 1 680px}
 .h-l1,.h-l2{font-size:clamp(44px,min(5.6vw,11svh),104px)}
-.hero .reel-ui{flex:0 0 300px}
 .foot-cr{flex-basis:100%;text-align:center;font-size:11px;color:var(--steel)}
 .foot-cr a{text-decoration:underline;text-underline-offset:2px}
 @media (max-width:760px){
   .stage::after{background:linear-gradient(180deg,rgba(10,11,12,.6) 0%,rgba(10,11,12,.15) 30%,transparent 40%,transparent 62%,rgba(10,11,12,.8) 80%)!important}
   .h-l1,.h-l2{font-size:clamp(36px,11.6vw,54px)}
-  .hero .reel-ui{display:none}
 }
 
 /* доставка: ночной терминал внизу кадра - текст наверх, на небо */
